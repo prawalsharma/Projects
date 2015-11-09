@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Manage Content";
+}
+
+@model VirtualCampus.Models.AOSCategoryModel
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    &nbsp;
+        <table id="content-table" style="width:100%;">
+            
+            <tr id="content-tr">
+                <td style="width: 40px;"><p>Sno</p></td>
+                <td><p>AOS Category</p></td>
+                <td style="width: 45px;"><p>Edit</p></td>
+                <td style="width: 45px;"><p>Delete</p></td>
+            </tr>
+            @{int i = 0;}
+            @foreach (var cat in @ViewBag.AOSCat)
+            {   
+            <tr id="content-tr">
+                <td><p>@cat.Areaofstudy_Category_Id</p></td>
+                <td><p>
+                <a href="ViewAOS?k=@cat.Areaofstudy_Category_Id">@cat.Category_Name</a>
+                </p>
+                </td>
+                <td><p>@Html.ActionLink("Edit", "EditAOSCategory", new { k = @cat.Areaofstudy_Category_Id }, null)</p></td>
+                <td><p>@Html.ActionLink("Delete", "DeleteAOSCategory", new { id = @cat.Areaofstudy_Category_Id }, new { onclick = "return confirm('Are you sure?');" })</p></td>
+                
+            </tr>
+             i++;
+                }
+            
+        </table>
+    &nbsp;&nbsp;
+    <ul>
+        <li style="display: inline-block;">
+        @Html.ActionLink("AddInterest", "AddInterest", "Manage",null ,new { @class = "button" })
+        </li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News SubCategory" /></li>
+    </ul>  
+</div>
+
+<script>
+    var id = null;
+    function deleterow(e) {
+        alert(e);
+        id = e;
+        alert("this is the id value : " + id);
+    }
+
+    $('#' + id).confirmOn('click', function (e, confirmed) {
+        var example = $(this).attr('k');
+        alert(example);
+        if (confirmed) { // Clicked yes
+            window.location.href = 'DeleteInterestCategory?k=' + example;
+        } else { // Clicked no
+            $('#msg_button_1').fadeIn();
+        }
+    }); 
+</script>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Student Name:  Prawal Sharma
+	URL: http://omega.uta.edu/~pss4720/project1/music.html
+ -->
+<html lang="en">
+  <head>
+    <title>A Music Web Application</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="music.js"></script>
+  </head>
+  <body style="width: 1000px; margin: auto;">
+    <form>
+       <label>Artist name: <input type="text" id="form-input"/></label>
+       <input type="button" onclick="sendRequest();" value="Display Info"/>
+    </form>
+    <center><b>Artist</b><div id="output1">&nbsp;</div></center>
+	<center><div id="opImages">&nbsp;</div></center>
+	<table>
+		<tr>
+			<td style="width: 50%;">
+				<b>Top Albums</b>
+				<div id="output3">&nbsp;</div>
+			</td>
+			<td valign="top" style="width: 50%;">	
+				<b>Upcoming Events</b>
+				<div id="output2">&nbsp;</div>
+			</td>
+		</tr>
+	</table>
+  
+  </body>
+</html>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "AddWorkspace";
+}
+@model VirtualCampus.Models.WorkspaceModel
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div class="block-container shadow style-3">
+     @using (Html.BeginForm()) { 
+     <table>
+        <tr>
+            <td>
+            @{ int userid = ViewBag.userid;}
+            @Html.Hidden("hidden",userid);
+            <p>Workspace Name:</p></td>
+            <td><p>@Html.TextBoxFor(model => model.Workspace_Name, new { @class = "TextBox" })</p></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" class="button" value="Add New Workspace" style="float: right;" /></td>
+        </tr>
+    </table>
+    }
+</div>
+@section sideSection {
+    <div id="side-bar-one">
+            <div class="header shadow">
+               <h5>System Workspaces</h5>
+            </div>
+            <div id="side-content-one" class="shadow"  style="height: 500px;">
+                <p>@ViewBag.Message1</p>
+            </div>
+        </div>
+}
+
+    
+
+
+
+

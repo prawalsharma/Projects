@@ -1,0 +1,133 @@
+﻿/*Index Page*/
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI';
+    background-color: #70ac9d;
+    overflow: hidden;
+    color: black;
+    background-image: url("../Images/background.jpg");
+    background-size: 100%;
+}
+table{
+    margin: auto;
+}
+.shadow{
+    -moz-box-shadow:    3px 3px 4px 0px #808080;
+    -webkit-box-shadow: 3px 3px 4px 0px #808080;
+     box-shadow:  3px 3px 4px 0px #808080;
+}
+#main-header {
+	height: 40px;
+    background-image: url("../Images/background/head.png");
+	width: 100%;
+	z-index: 1;
+	-webkit-box-shadow: 5px 8px 6px -6px grey;
+	   -moz-box-shadow: 5px 8px 6px -6px grey;
+	        box-shadow: 5px 8px 6px -6px grey;
+}
+#heading{
+    margin: auto;
+    width: 450px;
+    color: #323233;
+    margin-top: 75px;
+    font-family: 'MS Gothic';
+    text-align: center;
+}
+#index-menu{
+    display: block;
+    width: 450px;
+    margin: auto;
+    margin-top: 50px;
+}
+#center{
+    display: block;
+    height: 250px;
+    width: 450px;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+#center-head{
+    height: 40px;
+    width: 100%;
+    display: block;
+    border-bottom: solid #e9e9e9;
+    border-width: 1px;
+}
+#register-panel{
+    display: block;
+    width: 650px;
+    margin: auto;
+    background-color: #ffffff;
+}
+#register-head-panel{
+    height: 40px;
+    width: 100%;
+    display: block;
+    border-bottom: solid #e9e9e9;
+    border-width: 1px;
+}
+ul{
+    padding: 0px;
+}
+li{
+    display: inline-block;
+    width: 100px;
+    background-color: #323233;
+    height: 50px;
+    margin-right: 10px;
+}
+#last-li{
+    margin: 0px;
+}
+.a-box {
+    display: block;
+    text-decoration: none;
+    height: 40px;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding-top: 10px;
+}
+.a-box:hover{
+    background-color: #d5d4d4;
+    color: black;
+}
+p{
+    padding: 10px;
+    color: black;
+    font-size: 12px;
+}
+.button{
+    display: block;
+    float: right;
+    border:none;
+    color: white;
+    width: 75px;
+    height: 40px;
+    background-color: #323233;
+}
+.button:hover{
+    background-color: #d5d4d4;
+    color: black;
+}
+.searchTextBox {
+    background: white;
+    border: 1px solid #DDD;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #666;
+    padding: 5px 10px;
+    width: 200px;
+    outline: none;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.TextBox{
+    color: #666;
+    padding: 5px 10px;
+    border: 0px;
+    width: 250px;
+    border: 1px solid #DDD;
+    box-shadow: 0 0 5px #DDD inset;
+}

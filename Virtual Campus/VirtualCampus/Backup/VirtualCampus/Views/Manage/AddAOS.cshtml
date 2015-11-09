@@ -1,0 +1,59 @@
+﻿@model VirtualCampus.Models.AOSSubCatModel
+@{
+    ViewBag.Title = "AddAOSSubCat";
+}
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    <p>
+        <a href="#">News</a> --> <a href="#">Add News Subcategory</a>
+    </p>
+    &nbsp;&nbsp;&nbsp;
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        AOS Category</p>
+                </td>
+                <td>
+                    @* @Html.LabelFor(model => model.NewsCategory_id)
+                @Html.DropDownListFor(model => model.NewsCategory_id, Model.NewsCategory)
+                @Html.ValidationMessageFor(m=>m.NewsCategory_id) *@ @*@Html.DropDownList("categories");*@
+                    @Html.DropDownList("Areaofstudy_Category_Id", (IEnumerable<SelectListItem>)ViewData["AOSCat"],
+             new { id = "Areaofstudy_Category_Id" });
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        AreaOfStudy</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Areaofstudy, new { @class = "TextBox" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="Add AreaOfStudy" />
+                </td>
+            </tr>
+        </table>
+    }
+    <ul>
+        <li style="display: inline-block;">
+            <input class="button" type="button" value="Add News Category" /></li>
+        <li style="display: inline-block;">
+            <input class="button" type="button" value="Add More NewsLinks" /></li>
+    </ul>
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

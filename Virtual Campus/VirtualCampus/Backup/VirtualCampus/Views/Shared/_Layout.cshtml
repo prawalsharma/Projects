@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="/Scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/simpla.jquery.configuration.js"></script>
+    <script src="/Scripts/modernizr.custom.js"></script>
+    <script src="/Scripts/classie.js"></script>
+	<script src="/Scripts/uisearch.js"></script>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="list">
+        @Html.Partial("/Views/Shared/_List.cshtml");
+    </div>
+    <div id="main-header">
+        <div id="header-list">
+            <ul id="header-ul">
+                <li id="header-li"><a href="/home"><img alt="Home" src="~/Images/icons/home.png" /></a></li>
+                <li id="header-li"><a href="/home"><img alt="Messages" src="~/Images/icons/message.png" /></a></li>
+                <li id="header-li"><a href="/home"><img alt="Calender" src="~/Images/icons/calender.png" /></a></li>
+                <li id="header-li"><a href="/news"><img alt="Tasks" src="~/Images/icons/task.png" /></a></li>
+                
+            </ul>
+
+            <div id="header-ul-right">
+                        <div class="click-nav" style="display: inline-block; float:right;">
+			                <ul class="no-js">
+				                <li>
+					                <h6 style="color: White; padding-top: 5px; padding-bottom: 5px;">Profile</h6>
+					                <ul>
+						                <li><a href="#">Settings</a></li>
+						                <li><a href="#">Privacy</a></li>
+						                <li><a href="#">Help</a></li>
+						                <li>@Html.ActionLink("Logout","logoutuser","system")</li>
+					                </ul>
+				                </li>
+			                </ul>
+		                </div>
+                        <div id="sb-search" class="sb-search">
+						        <form>
+							        <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							        <input class="sb-search-submit" type="submit" value="">
+							        <span class="sb-icon-search"></span>
+						        </form>
+				        </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="content" class="block">
+            @RenderBody()
+        </div>
+        <div id="side" class="block">
+            @RenderSection("sideSection", required: false)
+        </div>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+		    $(function () {
+		        // Clickable Dropdown
+		        $('.click-nav > ul').toggleClass('no-js js');
+		        $('.click-nav .js ul').hide();
+		        $('.click-nav .js').click(function (e) {
+		            $('.click-nav .js ul').slideToggle(200);
+		            $('.clicker').toggleClass('active');
+		            e.stopPropagation();
+		        });
+		        $(document).click(function () {
+		            if ($('.click-nav .js ul').is(':visible')) {
+		                $('.click-nav .js ul', this).slideUp();
+		                $('.clicker').removeClass('active');
+		            }
+		        });
+		    });
+		</script>
+    <script>
+    new UISearch(document.getElementById('sb-search'));
+	</script>
+</html>

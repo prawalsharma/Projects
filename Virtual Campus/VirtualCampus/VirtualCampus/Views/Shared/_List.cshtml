@@ -1,0 +1,22 @@
+﻿<div class="list-top style-3">
+        <div id="list-top-head"><h4 id="side-h4">Workspaces</h4></div>
+            <div class = "first"></div>
+            @if (@ViewData["userwspace"] != null)
+            {
+             foreach (string s in @ViewData["userwspace"] as string[])
+             {
+                <div class="list-top-box">
+                    <a href="/workspace/index?k=@s" class="list-a"><p>@s</p></a>      
+                </div>
+             }
+             if (@ViewBag.privilage != 4)
+             {
+                <h6><a href="/workspace/addworkspace" style="bottom: 0;">Add Workspace</a></h6>
+             }
+            }
+        </div>
+        <div id="style-3" class="list-down">
+            <div id="list-down-head">
+                <h4>Calender</h4>
+            </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "ViewNews";
+}
+
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    <p>
+        <a href="#">News</a> --> <a href="#">Add News</a>
+    </p>
+     <h4> <p> Category: @ViewBag.catname </p> </h4>
+     
+   <table id="content-table" style="width:100%;">
+            
+            <tr id="content-tr">
+                <td style="width: 40px;"><p>Sno</p></td>
+                <td><p>News Sub Category</p></td>
+                <td style="width: 45px;"><p>Edit</p></td>
+                <td style="width: 45px;"><p>Delete</p></td>
+            </tr>
+            
+            @foreach (var subcat in @ViewBag.newslist)
+            {   
+            <tr id="content-tr">
+                <td><p>@subcat.News_Id</p></td>
+                <td><p>@subcat.News_Link</p></td>
+                <td><p>@Html.ActionLink("Edit", "EditNewsSubCat", new { k = @subcat.News_Id, j= @subcat.NewsCategory_Id }, null)</p></td>
+                <td><p>@Html.ActionLink("Delete","DeleteNewsSubCat",null, new{@id= "demo", k=@subcat.News_Id},new { onclick = "return confirm('Are you sure?');"})</p></td>
+            </tr>
+            }
+            
+        </table>    
+        
+
+    <ul>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News Category" /></li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News SubCategory"/></li>
+    </ul>
+</div>
+
+<script>
+    $('#demo').confirmOn('click', function (e, confirmed) {
+        var id = $("#demo").attr('k');
+        if (confirmed) { // Clicked yes
+
+            window.location.href = '/Manage/DeleteNewsSubCat?k=' + id;
+        } else { // Clicked no
+            $('#msg_button_1').fadeIn();
+        }
+    });
+</script>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

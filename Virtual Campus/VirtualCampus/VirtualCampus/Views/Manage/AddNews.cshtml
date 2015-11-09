@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "AddNews";
+}
+
+@model VirtualCampus.Models.NewsCategoryModel
+            
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    <p>
+        <a href="#">News</a> --> <a href="#">Add News</a>
+    </p>
+    &nbsp;&nbsp;&nbsp;
+    @using (Html.BeginForm())
+    {
+    <table>
+        <tr>
+            <td><p>News Category</p></td>
+            <td> @Html.TextBoxFor(model => model.CategoryName, new { @class = "TextBox" })
+          
+                @Html.ValidationMessageFor(model => model.CategoryName)
+            </td>
+            
+        </tr>
+        <tr>
+            <td><p>Category Description</p></td>
+            <td><textarea rows="4" class="TextBox"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" value="Add NewsCategory" /></td>
+        </tr>
+    </table>
+    }
+    <ul>
+        <li style="display: inline-block;">@Html.ActionLink("Add More NewsCategory", "AddNews", "Manage", new { @class = "button" })</li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News SubCategory"/></li>
+    </ul>
+    
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

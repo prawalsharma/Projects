@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Workspace - ABC";
+}
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div class="block-container shadow style-3">
+<h5>Application: @ViewBag.applicationname</h5>
+<p>Post by: @ViewBag.postername</p>
+</div>
+@section sideSection {
+    <div id="side-bar-one">
+        <div class="header shadow">
+            <h5>
+                Applications
+            </h5>
+        </div>
+        @{
+            string[] appname = new string[(int)@ViewBag.noapp];
+            Int32[] appid = new Int32[(int)@ViewBag.noapp];
+            int i = 0, j = 0, p = 0, q = 0;
+            foreach (string name in @ViewBag.appname as string[])
+            {
+                appname[i] = name;
+                i++;
+            }
+            foreach (Int32 aid in @ViewBag.appid as Int32[])
+            {
+                appid[j] = aid;
+                j++;
+            }
+            string[] workspaceusername = new string[(int)@ViewBag.usercount];
+            Int32[] wusernameid = new Int32[(int)@ViewBag.usercount];
+            foreach (string username in @ViewData["workspaceusername"] as string[])
+            {
+                workspaceusername[p] = username;
+                p++;
+            }
+            foreach (Int32 uid in @ViewData["userid"] as Int32[])
+            {
+                wusernameid[q] = uid;
+                q++;
+            }
+        }
+        <div id="" class="shadow" style="width: 350px; max-height: 200px; margin: auto; padding: 5px 12px 5px 12px;
+            background: #ffffff; overflow: auto;">
+            <ul class="menu-ul">
+                @for (int k = 0; k < (int)@ViewBag.noapp; k++)
+                {
+                    <li class="menu-li" style="display: inline;"><a href="/application/viewapplication?k=@ViewBag.workspacename&id=@appid[k]">@appname[k]</a></li>
+                }
+            </ul>
+            <h6>
+                <a href="/application/addapplication?k=@ViewBag.workspacename">Add New Application</a></h6>
+        </div>
+        <div class="header shadow">
+            <h5>
+                Workspace Members</h5>
+        </div>
+        <div class="shadow" style="width: 350px; max-height: 200px; margin: auto; padding: 5px 12px 5px 12px;
+            background: #ffffff; overflow: auto;">
+            <ul class="menu-ul">
+                @for (int l = 0; l < (int)@ViewBag.usercount; l++)
+                {
+                    <li class="menu-li" style="display: block;"><a href="@wusernameid[l]">@workspaceusername[l]</a></li>
+                }
+            </ul>
+            <h6>
+                <a href="/workspace/adduser?workspace=@ViewBag.workspacename">Add New Members</a></h6>
+        </div>
+    </div>
+}
+

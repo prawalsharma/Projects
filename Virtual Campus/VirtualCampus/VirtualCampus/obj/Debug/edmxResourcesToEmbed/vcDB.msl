@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Virtual_CampusModelStoreContainer" CdmEntityContainer="Virtual_CampusEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Achievement">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Achievement">
+        <MappingFragment StoreEntitySet="VC_Achievement">
+          <ScalarProperty Name="Achievement_Id" ColumnName="Achievement_Id" />
+          <ScalarProperty Name="Areaofstudy_Id" ColumnName="Areaofstudy_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="AchievementType" ColumnName="AchievementType" />
+          <ScalarProperty Name="Achievement_Description" ColumnName="Achievement_Description" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Application">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Application">
+        <MappingFragment StoreEntitySet="VC_Application">
+          <ScalarProperty Name="Application_Id" ColumnName="Application_Id" />
+          <ScalarProperty Name="WorkspaceUser_Id" ColumnName="WorkspaceUser_Id" />
+          <ScalarProperty Name="Workspace_Id" ColumnName="Workspace_Id" />
+          <ScalarProperty Name="Application_Name" ColumnName="Application_Name" />
+          <ScalarProperty Name="DateLabel_1" ColumnName="DateLabel_1" />
+          <ScalarProperty Name="TextLabel_1" ColumnName="TextLabel_1" />
+          <ScalarProperty Name="TextLabel_2" ColumnName="TextLabel_2" />
+          <ScalarProperty Name="TextLabel_3" ColumnName="TextLabel_3" />
+          <ScalarProperty Name="TextLabel_4" ColumnName="TextLabel_4" />
+          <ScalarProperty Name="TextLabel_5" ColumnName="TextLabel_5" />
+          <ScalarProperty Name="TextArea_1" ColumnName="TextArea_1" />
+          <ScalarProperty Name="TextArea_2" ColumnName="TextArea_2" />
+          <ScalarProperty Name="TextArea_3" ColumnName="TextArea_3" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Areaofstudy">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Areaofstudy">
+        <MappingFragment StoreEntitySet="VC_Areaofstudy">
+          <ScalarProperty Name="Areaofstudy_Id" ColumnName="Areaofstudy_Id" />
+          <ScalarProperty Name="Areaofstudy_Category_Id" ColumnName="Areaofstudy_Category_Id" />
+          <ScalarProperty Name="Areaofstudy" ColumnName="Areaofstudy" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Areaofstudy_Category">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Areaofstudy_Category">
+        <MappingFragment StoreEntitySet="VC_Areaofstudy_Category">
+          <ScalarProperty Name="Areaofstudy_Category_Id" ColumnName="Areaofstudy_Category_Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Blog_Comment">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Blog_Comment">
+        <MappingFragment StoreEntitySet="VC_Blog_Comment">
+          <ScalarProperty Name="BlogComment_Id" ColumnName="BlogComment_Id" />
+          <ScalarProperty Name="Blog_Id" ColumnName="Blog_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Blog_Comment" ColumnName="Blog_Comment" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Blog_Master">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Blog_Master">
+        <MappingFragment StoreEntitySet="VC_Blog_Master">
+          <ScalarProperty Name="Blog_Id" ColumnName="Blog_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Blog_Title" ColumnName="Blog_Title" />
+          <ScalarProperty Name="Blog_Content" ColumnName="Blog_Content" />
+          <ScalarProperty Name="Blog_Image1" ColumnName="Blog_Image1" />
+          <ScalarProperty Name="Blog_Image2" ColumnName="Blog_Image2" />
+          <ScalarProperty Name="Blog_Image3" ColumnName="Blog_Image3" />
+          <ScalarProperty Name="Blog_Video1" ColumnName="Blog_Video1" />
+          <ScalarProperty Name="Blog_Video2" ColumnName="Blog_Video2" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_College">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_College">
+        <MappingFragment StoreEntitySet="VC_College">
+          <ScalarProperty Name="College_Id" ColumnName="College_Id" />
+          <ScalarProperty Name="College_Name" ColumnName="College_Name" />
+          <ScalarProperty Name="AreaOfStudy_Id" ColumnName="AreaOfStudy_Id" />
+          <ScalarProperty Name="College_Degree" ColumnName="College_Degree" />
+          <ScalarProperty Name="University_Name" ColumnName="University_Name" />
+          <ScalarProperty Name="College_EnrollmentYear" ColumnName="College_EnrollmentYear" />
+          <ScalarProperty Name="College_PassingYear" ColumnName="College_PassingYear" />
+          <ScalarProperty Name="College_LiveBacklog" ColumnName="College_LiveBacklog" />
+          <ScalarProperty Name="College_TotalBacklog" ColumnName="College_TotalBacklog" />
+          <ScalarProperty Name="College_Result_Sem_1" ColumnName="College_Result_Sem_1" />
+          <ScalarProperty Name="College_Result_Sem_2" ColumnName="College_Result_Sem_2" />
+          <ScalarProperty Name="College_Result_Sem_3" ColumnName="College_Result_Sem_3" />
+          <ScalarProperty Name="College_Result_Sem_4" ColumnName="College_Result_Sem_4" />
+          <ScalarProperty Name="College_Result_Sem_5" ColumnName="College_Result_Sem_5" />
+          <ScalarProperty Name="College_Result_Sem_6" ColumnName="College_Result_Sem_6" />
+          <ScalarProperty Name="College_Result_Sem_7" ColumnName="College_Result_Sem_7" />
+          <ScalarProperty Name="College_Result_Sem_8" ColumnName="College_Result_Sem_8" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Discussion">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Discussion">
+        <MappingFragment StoreEntitySet="VC_Discussion">
+          <ScalarProperty Name="Discussion_Id" ColumnName="Discussion_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Discussion_Title" ColumnName="Discussion_Title" />
+          <ScalarProperty Name="Discussion_Content" ColumnName="Discussion_Content" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Discussion_Comment">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Discussion_Comment">
+        <MappingFragment StoreEntitySet="VC_Discussion_Comment">
+          <ScalarProperty Name="DiscussionComment_Id" ColumnName="DiscussionComment_Id" />
+          <ScalarProperty Name="Discussion_Id" ColumnName="Discussion_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Discussion_Comment" ColumnName="Discussion_Comment" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Education">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Education">
+        <MappingFragment StoreEntitySet="VC_Education">
+          <ScalarProperty Name="Education_Id" ColumnName="Education_Id" />
+          <ScalarProperty Name="School_Id" ColumnName="School_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="College_Id" ColumnName="College_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_EndorsementToSkill">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_EndorsementToSkill">
+        <MappingFragment StoreEntitySet="VC_EndorsementToSkill">
+          <ScalarProperty Name="Endorsement_Id" ColumnName="Endorsement_Id" />
+          <ScalarProperty Name="UserSkill_Id" ColumnName="UserSkill_Id" />
+          <ScalarProperty Name="From_User_Id" ColumnName="From_User_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Experience">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Experience">
+        <MappingFragment StoreEntitySet="VC_Experience">
+          <ScalarProperty Name="Experience_Id" ColumnName="Experience_Id" />
+          <ScalarProperty Name="Areaofstudy_Id" ColumnName="Areaofstudy_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Experience_Type" ColumnName="Experience_Type" />
+          <ScalarProperty Name="WorkExperience" ColumnName="WorkExperience" />
+          <ScalarProperty Name="Experience_Description" ColumnName="Experience_Description" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Interest_Category">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Interest_Category">
+        <MappingFragment StoreEntitySet="VC_Interest_Category">
+          <ScalarProperty Name="InterestCategory_Id" ColumnName="InterestCategory_Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Interest_Link">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Interest_Link">
+        <MappingFragment StoreEntitySet="VC_Interest_Link">
+          <ScalarProperty Name="Interest_Id" ColumnName="Interest_Id" />
+          <ScalarProperty Name="InterestCategory_Id" ColumnName="InterestCategory_Id" />
+          <ScalarProperty Name="Interest_Link" ColumnName="Interest_Link" />
+          <ScalarProperty Name="Interest_Description_Name" ColumnName="Interest_Description_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Message">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Message">
+        <MappingFragment StoreEntitySet="VC_Message">
+          <ScalarProperty Name="Message_Id" ColumnName="Message_Id" />
+          <ScalarProperty Name="UserToMessage_Id" ColumnName="UserToMessage_Id" />
+          <ScalarProperty Name="Message_Details" ColumnName="Message_Details" />
+          <ScalarProperty Name="Message_From_Id" ColumnName="Message_From_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_News_Category">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_News_Category">
+        <MappingFragment StoreEntitySet="VC_News_Category">
+          <ScalarProperty Name="NewsCategory_Id" ColumnName="NewsCategory_Id" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_News_Link">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_News_Link">
+        <MappingFragment StoreEntitySet="VC_News_Link">
+          <ScalarProperty Name="News_Id" ColumnName="News_Id" />
+          <ScalarProperty Name="NewsCategory_Id" ColumnName="NewsCategory_Id" />
+          <ScalarProperty Name="News_Link" ColumnName="News_Link" />
+          <ScalarProperty Name="News_Description_Name" ColumnName="News_Description_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Opportunities">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Opportunities">
+        <MappingFragment StoreEntitySet="VC_Opportunities">
+          <ScalarProperty Name="Opportunity_Id" ColumnName="Opportunity_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Opportunity_Title" ColumnName="Opportunity_Title" />
+          <ScalarProperty Name="Opportunity_Description" ColumnName="Opportunity_Description" />
+          <ScalarProperty Name="Opportunity_Contact" ColumnName="Opportunity_Contact" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Post">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Post">
+        <MappingFragment StoreEntitySet="VC_Post">
+          <ScalarProperty Name="Post_Id" ColumnName="Post_Id" />
+          <ScalarProperty Name="Application_Id" ColumnName="Application_Id" />
+          <ScalarProperty Name="WorkspaceUser_Id" ColumnName="WorkspaceUser_Id" />
+          <ScalarProperty Name="Post_Date" ColumnName="Post_Date" />
+          <ScalarProperty Name="TextField_1" ColumnName="TextField_1" />
+          <ScalarProperty Name="TextField_2" ColumnName="TextField_2" />
+          <ScalarProperty Name="TextField_3" ColumnName="TextField_3" />
+          <ScalarProperty Name="TextField_4" ColumnName="TextField_4" />
+          <ScalarProperty Name="TextField_5" ColumnName="TextField_5" />
+          <ScalarProperty Name="TextArea_1" ColumnName="TextArea_1" />
+          <ScalarProperty Name="TextArea_2" ColumnName="TextArea_2" />
+          <ScalarProperty Name="TextArea_3" ColumnName="TextArea_3" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Post_Comment">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Post_Comment">
+        <MappingFragment StoreEntitySet="VC_Post_Comment">
+          <ScalarProperty Name="PostComment_Id" ColumnName="PostComment_Id" />
+          <ScalarProperty Name="Post_Id" ColumnName="Post_Id" />
+          <ScalarProperty Name="WorkspaceUser_Id" ColumnName="WorkspaceUser_Id" />
+          <ScalarProperty Name="Post_Comment" ColumnName="Post_Comment" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_ProfessionalCourse">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_ProfessionalCourse">
+        <MappingFragment StoreEntitySet="VC_ProfessionalCourse">
+          <ScalarProperty Name="ProfessionalCourse_Id" ColumnName="ProfessionalCourse_Id" />
+          <ScalarProperty Name="Education_Id" ColumnName="Education_Id" />
+          <ScalarProperty Name="ProfessionalCourse_Name" ColumnName="ProfessionalCourse_Name" />
+          <ScalarProperty Name="ProfessionalCourse_Institute" ColumnName="ProfessionalCourse_Institute" />
+          <ScalarProperty Name="ProfessionalCourse_Place" ColumnName="ProfessionalCourse_Place" />
+          <ScalarProperty Name="ProfessionalCourse_Certificate" ColumnName="ProfessionalCourse_Certificate" />
+          <ScalarProperty Name="ProfessionalCourse_PassingYear" ColumnName="ProfessionalCourse_PassingYear" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Recommendation">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Recommendation">
+        <MappingFragment StoreEntitySet="VC_Recommendation">
+          <ScalarProperty Name="Recommendation_Id" ColumnName="Recommendation_Id" />
+          <ScalarProperty Name="Faculty_Id" ColumnName="Faculty_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Areaofrec" ColumnName="Areaofrec" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updates_TS" ColumnName="Updates_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Report">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Report">
+        <MappingFragment StoreEntitySet="VC_Report">
+          <ScalarProperty Name="Report_Id" ColumnName="Report_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Social_Report" ColumnName="Social_Report" />
+          <ScalarProperty Name="Leadership_Report" ColumnName="Leadership_Report" />
+          <ScalarProperty Name="Academic_Report" ColumnName="Academic_Report" />
+          <ScalarProperty Name="Personality_Report" ColumnName="Personality_Report" />
+          <ScalarProperty Name="EQ_Report" ColumnName="EQ_Report" />
+          <ScalarProperty Name="Report_Month" ColumnName="Report_Month" />
+          <ScalarProperty Name="Report_Year" ColumnName="Report_Year" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Review_Comment">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Review_Comment">
+        <MappingFragment StoreEntitySet="VC_Review_Comment">
+          <ScalarProperty Name="ReviewComment_Id" ColumnName="ReviewComment_Id" />
+          <ScalarProperty Name="Review_Id" ColumnName="Review_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Review_Comment" ColumnName="Review_Comment" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Review_Master">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Review_Master">
+        <MappingFragment StoreEntitySet="VC_Review_Master">
+          <ScalarProperty Name="Review_Id" ColumnName="Review_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Review_Title" ColumnName="Review_Title" />
+          <ScalarProperty Name="Review_Content" ColumnName="Review_Content" />
+          <ScalarProperty Name="Review_Image1" ColumnName="Review_Image1" />
+          <ScalarProperty Name="Review_Category" ColumnName="Review_Category" />
+          <ScalarProperty Name="Review_Ratings" ColumnName="Review_Ratings" />
+          <ScalarProperty Name="Review_Map" ColumnName="Review_Map" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_School">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_School">
+        <MappingFragment StoreEntitySet="VC_School">
+          <ScalarProperty Name="School_Id" ColumnName="School_Id" />
+          <ScalarProperty Name="School_Name" ColumnName="School_Name" />
+          <ScalarProperty Name="School_Medium" ColumnName="School_Medium" />
+          <ScalarProperty Name="SSC_Score" ColumnName="SSC_Score" />
+          <ScalarProperty Name="SSC_Board" ColumnName="SSC_Board" />
+          <ScalarProperty Name="SSC_PassingYear" ColumnName="SSC_PassingYear" />
+          <ScalarProperty Name="HSC_Stream" ColumnName="HSC_Stream" />
+          <ScalarProperty Name="HSC_Score" ColumnName="HSC_Score" />
+          <ScalarProperty Name="HSC_Board" ColumnName="HSC_Board" />
+          <ScalarProperty Name="HSC_PassingYear" ColumnName="HSC_PassingYear" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Skill_Category">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Skill_Category">
+        <MappingFragment StoreEntitySet="VC_Skill_Category">
+          <ScalarProperty Name="Skill_Category_Id" ColumnName="Skill_Category_Id" />
+          <ScalarProperty Name="Skill_Category_Name" ColumnName="Skill_Category_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Skill_Subcategory">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Skill_Subcategory">
+        <MappingFragment StoreEntitySet="VC_Skill_Subcategory">
+          <ScalarProperty Name="Skill_Subcategory_Id" ColumnName="Skill_Subcategory_Id" />
+          <ScalarProperty Name="Skill_Category_Id" ColumnName="Skill_Category_Id" />
+          <ScalarProperty Name="Areaofstudy_Id" ColumnName="Areaofstudy_Id" />
+          <ScalarProperty Name="Skill_Subcategory_Name" ColumnName="Skill_Subcategory_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Staff">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Staff">
+        <MappingFragment StoreEntitySet="VC_Staff">
+          <ScalarProperty Name="Staff_Id" ColumnName="Staff_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Staff_Name" ColumnName="Staff_Name" />
+          <ScalarProperty Name="Staff_Department" ColumnName="Staff_Department" />
+          <ScalarProperty Name="Staff_College" ColumnName="Staff_College" />
+          <ScalarProperty Name="Staff_Gender" ColumnName="Staff_Gender" />
+          <ScalarProperty Name="Staff_LibraryId" ColumnName="Staff_LibraryId" />
+          <ScalarProperty Name="Staff_Designation" ColumnName="Staff_Designation" />
+          <ScalarProperty Name="Staff_EmailId" ColumnName="Staff_EmailId" />
+          <ScalarProperty Name="Staff_ContactNo" ColumnName="Staff_ContactNo" />
+          <ScalarProperty Name="Staff_Birthdate" ColumnName="Staff_Birthdate" />
+          <ScalarProperty Name="Staff_Security_Que" ColumnName="Staff_Security_Que" />
+          <ScalarProperty Name="Staff_Security_Ans" ColumnName="Staff_Security_Ans" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Student">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Student">
+        <MappingFragment StoreEntitySet="VC_Student">
+          <ScalarProperty Name="Student_Index" ColumnName="Student_Index" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Department" ColumnName="Student_Department" />
+          <ScalarProperty Name="Student_College" ColumnName="Student_College" />
+          <ScalarProperty Name="Student_Gender" ColumnName="Student_Gender" />
+          <ScalarProperty Name="Student_EnrollYear" ColumnName="Student_EnrollYear" />
+          <ScalarProperty Name="Student_LibraryId" ColumnName="Student_LibraryId" />
+          <ScalarProperty Name="Student_EnrollmentNo" ColumnName="Student_EnrollmentNo" />
+          <ScalarProperty Name="Student_EmailId" ColumnName="Student_EmailId" />
+          <ScalarProperty Name="Student_ContactNo" ColumnName="Student_ContactNo" />
+          <ScalarProperty Name="Student_Birthdate" ColumnName="Student_Birthdate" />
+          <ScalarProperty Name="Student_Hometown" ColumnName="Student_Hometown" />
+          <ScalarProperty Name="Student_Security_Que" ColumnName="Student_Security_Que" />
+          <ScalarProperty Name="Student_Security_Ans" ColumnName="Student_Security_Ans" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Task">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Task">
+        <MappingFragment StoreEntitySet="VC_Task">
+          <ScalarProperty Name="Task_Id" ColumnName="Task_Id" />
+          <ScalarProperty Name="WorkspaceUser_Id" ColumnName="WorkspaceUser_Id" />
+          <ScalarProperty Name="Workspace_Id" ColumnName="Workspace_Id" />
+          <ScalarProperty Name="Faculty_Id" ColumnName="Faculty_Id" />
+          <ScalarProperty Name="Task_Name" ColumnName="Task_Name" />
+          <ScalarProperty Name="Task_Deadline" ColumnName="Task_Deadline" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_UniversityActivities">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_UniversityActivities">
+        <MappingFragment StoreEntitySet="VC_UniversityActivities">
+          <ScalarProperty Name="UniversityActivity_Id" ColumnName="UniversityActivity_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="UniversityActivity_Title" ColumnName="UniversityActivity_Title" />
+          <ScalarProperty Name="UniversityActivity_Desc" ColumnName="UniversityActivity_Desc" />
+          <ScalarProperty Name="UniversityActivity_Contact" ColumnName="UniversityActivity_Contact" />
+          <ScalarProperty Name="UniversityActivity__Image" ColumnName="UniversityActivity__Image" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_User">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_User">
+        <MappingFragment StoreEntitySet="VC_User">
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+          <ScalarProperty Name="User_Privilage" ColumnName="User_Privilage" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_UserSkill">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_UserSkill">
+        <MappingFragment StoreEntitySet="VC_UserSkill">
+          <ScalarProperty Name="UserSkill_Id" ColumnName="UserSkill_Id" />
+          <ScalarProperty Name="Skill_Subcategory_Id" ColumnName="Skill_Subcategory_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_UserToInterest">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_UserToInterest">
+        <MappingFragment StoreEntitySet="VC_UserToInterest">
+          <ScalarProperty Name="UserToInterest_Id" ColumnName="UserToInterest_Id" />
+          <ScalarProperty Name="InterestCategory_Id" ColumnName="InterestCategory_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_UserToMessage">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_UserToMessage">
+        <MappingFragment StoreEntitySet="VC_UserToMessage">
+          <ScalarProperty Name="UserToMessage_Id" ColumnName="UserToMessage_Id" />
+          <ScalarProperty Name="User_Id_1" ColumnName="User_Id_1" />
+          <ScalarProperty Name="User_Id_2" ColumnName="User_Id_2" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_UserToNews">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_UserToNews">
+        <MappingFragment StoreEntitySet="VC_UserToNews">
+          <ScalarProperty Name="UserToNews_Id" ColumnName="UserToNews_Id" />
+          <ScalarProperty Name="NewsCategory_Id" ColumnName="NewsCategory_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_Workspace">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_Workspace">
+        <MappingFragment StoreEntitySet="VC_Workspace">
+          <ScalarProperty Name="Workspace_Id" ColumnName="Workspace_Id" />
+          <ScalarProperty Name="Owner_User_Id" ColumnName="Owner_User_Id" />
+          <ScalarProperty Name="Workspace_Name" ColumnName="Workspace_Name" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VC_WorkspaceUser">
+      <EntityTypeMapping TypeName="Virtual_CampusModel.VC_WorkspaceUser">
+        <MappingFragment StoreEntitySet="VC_WorkspaceUser">
+          <ScalarProperty Name="WorkspaceUser_Id" ColumnName="WorkspaceUser_Id" />
+          <ScalarProperty Name="Workspace_Id" ColumnName="Workspace_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Created_TS" ColumnName="Created_TS" />
+          <ScalarProperty Name="Updated_TS" ColumnName="Updated_TS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

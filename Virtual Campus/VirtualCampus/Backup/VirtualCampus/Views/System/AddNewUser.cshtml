@@ -1,0 +1,64 @@
+﻿@model VirtualCampus.Models.AddNewUser
+@{
+    ViewBag.Title = "AddAOSSubCat";
+}
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    <p>
+        <a href="#">Users</a> --> <a href="#">Add New User</a>
+    </p>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        Email:</p>
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.EmailId, new { @class = "TextBox" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        User Type:
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        @Html.RadioButtonFor(model => model.Privilage, "1")Admin
+                        @Html.RadioButtonFor(model => model.Privilage, "2")T&P
+                        @Html.RadioButtonFor(model => model.Privilage, "3")Staff
+                        @Html.RadioButtonFor(model => model.Privilage, "4")Student
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Workspaces:
+                    </p>
+                </td>
+                <td>
+                    @Html.DropDownList("Workspace", (IEnumerable<SelectListItem>)ViewData["wname"], new { @class = "TextBox", id = "Workspace_Id" });
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" class="button" value="Add User" style="float: right;" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

@@ -1,0 +1,1513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Virtual_CampusModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Virtual_CampusEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Virtual_CampusModel.sysdiagram" />
+    <EntitySet Name="VC_Achievement" EntityType="Virtual_CampusModel.VC_Achievement" />
+    <EntitySet Name="VC_Application" EntityType="Virtual_CampusModel.VC_Application" />
+    <EntitySet Name="VC_Areaofstudy" EntityType="Virtual_CampusModel.VC_Areaofstudy" />
+    <EntitySet Name="VC_Areaofstudy_Category" EntityType="Virtual_CampusModel.VC_Areaofstudy_Category" />
+    <EntitySet Name="VC_Blog_Comment" EntityType="Virtual_CampusModel.VC_Blog_Comment" />
+    <EntitySet Name="VC_Blog_Master" EntityType="Virtual_CampusModel.VC_Blog_Master" />
+    <EntitySet Name="VC_College" EntityType="Virtual_CampusModel.VC_College" />
+    <EntitySet Name="VC_Discussion" EntityType="Virtual_CampusModel.VC_Discussion" />
+    <EntitySet Name="VC_Discussion_Comment" EntityType="Virtual_CampusModel.VC_Discussion_Comment" />
+    <EntitySet Name="VC_Education" EntityType="Virtual_CampusModel.VC_Education" />
+    <EntitySet Name="VC_EndorsementToSkill" EntityType="Virtual_CampusModel.VC_EndorsementToSkill" />
+    <EntitySet Name="VC_Experience" EntityType="Virtual_CampusModel.VC_Experience" />
+    <EntitySet Name="VC_Interest_Category" EntityType="Virtual_CampusModel.VC_Interest_Category" />
+    <EntitySet Name="VC_Interest_Link" EntityType="Virtual_CampusModel.VC_Interest_Link" />
+    <EntitySet Name="VC_Message" EntityType="Virtual_CampusModel.VC_Message" />
+    <EntitySet Name="VC_News_Category" EntityType="Virtual_CampusModel.VC_News_Category" />
+    <EntitySet Name="VC_News_Link" EntityType="Virtual_CampusModel.VC_News_Link" />
+    <EntitySet Name="VC_Opportunities" EntityType="Virtual_CampusModel.VC_Opportunities" />
+    <EntitySet Name="VC_Post" EntityType="Virtual_CampusModel.VC_Post" />
+    <EntitySet Name="VC_Post_Comment" EntityType="Virtual_CampusModel.VC_Post_Comment" />
+    <EntitySet Name="VC_ProfessionalCourse" EntityType="Virtual_CampusModel.VC_ProfessionalCourse" />
+    <EntitySet Name="VC_Recommendation" EntityType="Virtual_CampusModel.VC_Recommendation" />
+    <EntitySet Name="VC_Report" EntityType="Virtual_CampusModel.VC_Report" />
+    <EntitySet Name="VC_Review_Comment" EntityType="Virtual_CampusModel.VC_Review_Comment" />
+    <EntitySet Name="VC_Review_Master" EntityType="Virtual_CampusModel.VC_Review_Master" />
+    <EntitySet Name="VC_School" EntityType="Virtual_CampusModel.VC_School" />
+    <EntitySet Name="VC_Skill_Category" EntityType="Virtual_CampusModel.VC_Skill_Category" />
+    <EntitySet Name="VC_Skill_Subcategory" EntityType="Virtual_CampusModel.VC_Skill_Subcategory" />
+    <EntitySet Name="VC_Staff" EntityType="Virtual_CampusModel.VC_Staff" />
+    <EntitySet Name="VC_Student" EntityType="Virtual_CampusModel.VC_Student" />
+    <EntitySet Name="VC_Task" EntityType="Virtual_CampusModel.VC_Task" />
+    <EntitySet Name="VC_UniversityActivities" EntityType="Virtual_CampusModel.VC_UniversityActivities" />
+    <EntitySet Name="VC_User" EntityType="Virtual_CampusModel.VC_User" />
+    <EntitySet Name="VC_UserSkill" EntityType="Virtual_CampusModel.VC_UserSkill" />
+    <EntitySet Name="VC_UserToInterest" EntityType="Virtual_CampusModel.VC_UserToInterest" />
+    <EntitySet Name="VC_UserToMessage" EntityType="Virtual_CampusModel.VC_UserToMessage" />
+    <EntitySet Name="VC_UserToNews" EntityType="Virtual_CampusModel.VC_UserToNews" />
+    <EntitySet Name="VC_Workspace" EntityType="Virtual_CampusModel.VC_Workspace" />
+    <EntitySet Name="VC_WorkspaceUser" EntityType="Virtual_CampusModel.VC_WorkspaceUser" />
+    <AssociationSet Name="FK_Achievement_Areaofstudy" Association="Virtual_CampusModel.FK_Achievement_Areaofstudy">
+      <End Role="VC_Areaofstudy" EntitySet="VC_Areaofstudy" />
+      <End Role="VC_Achievement" EntitySet="VC_Achievement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Achievement_User" Association="Virtual_CampusModel.FK_Achievement_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Achievement" EntitySet="VC_Achievement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Application_Workspace" Association="Virtual_CampusModel.FK_Application_Workspace">
+      <End Role="VC_Workspace" EntitySet="VC_Workspace" />
+      <End Role="VC_Application" EntitySet="VC_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Application_WorkspaceUser" Association="Virtual_CampusModel.FK_Application_WorkspaceUser">
+      <End Role="VC_WorkspaceUser" EntitySet="VC_WorkspaceUser" />
+      <End Role="VC_Application" EntitySet="VC_Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_Application" Association="Virtual_CampusModel.FK_Post_Application">
+      <End Role="VC_Application" EntitySet="VC_Application" />
+      <End Role="VC_Post" EntitySet="VC_Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Areaofstudy_Areaofstudy_Category" Association="Virtual_CampusModel.FK_Areaofstudy_Areaofstudy_Category">
+      <End Role="VC_Areaofstudy_Category" EntitySet="VC_Areaofstudy_Category" />
+      <End Role="VC_Areaofstudy" EntitySet="VC_Areaofstudy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Experience_Areaofstudy" Association="Virtual_CampusModel.FK_Experience_Areaofstudy">
+      <End Role="VC_Areaofstudy" EntitySet="VC_Areaofstudy" />
+      <End Role="VC_Experience" EntitySet="VC_Experience" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_Subcategory_Areaofstudy" Association="Virtual_CampusModel.FK_Skill_Subcategory_Areaofstudy">
+      <End Role="VC_Areaofstudy" EntitySet="VC_Areaofstudy" />
+      <End Role="VC_Skill_Subcategory" EntitySet="VC_Skill_Subcategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_College_VC_Areaofstudy" Association="Virtual_CampusModel.FK_VC_College_VC_Areaofstudy">
+      <End Role="VC_Areaofstudy" EntitySet="VC_Areaofstudy" />
+      <End Role="VC_College" EntitySet="VC_College" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_Blog_Comment_VC_Blog_Master" Association="Virtual_CampusModel.FK_VC_Blog_Comment_VC_Blog_Master">
+      <End Role="VC_Blog_Master" EntitySet="VC_Blog_Master" />
+      <End Role="VC_Blog_Comment" EntitySet="VC_Blog_Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Blog_Master_User" Association="Virtual_CampusModel.FK_Blog_Master_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Blog_Master" EntitySet="VC_Blog_Master" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Education_College" Association="Virtual_CampusModel.FK_Education_College">
+      <End Role="VC_College" EntitySet="VC_College" />
+      <End Role="VC_Education" EntitySet="VC_Education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Discussion_Comment_Discussion" Association="Virtual_CampusModel.FK_Discussion_Comment_Discussion">
+      <End Role="VC_Discussion" EntitySet="VC_Discussion" />
+      <End Role="VC_Discussion_Comment" EntitySet="VC_Discussion_Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Discussion_User" Association="Virtual_CampusModel.FK_Discussion_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Discussion" EntitySet="VC_Discussion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Education_School" Association="Virtual_CampusModel.FK_Education_School">
+      <End Role="VC_School" EntitySet="VC_School" />
+      <End Role="VC_Education" EntitySet="VC_Education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Education_User" Association="Virtual_CampusModel.FK_Education_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Education" EntitySet="VC_Education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfessionalCourse_Education" Association="Virtual_CampusModel.FK_ProfessionalCourse_Education">
+      <End Role="VC_Education" EntitySet="VC_Education" />
+      <End Role="VC_ProfessionalCourse" EntitySet="VC_ProfessionalCourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EndorsementToSkill_Skill" Association="Virtual_CampusModel.FK_EndorsementToSkill_Skill">
+      <End Role="VC_UserSkill" EntitySet="VC_UserSkill" />
+      <End Role="VC_EndorsementToSkill" EntitySet="VC_EndorsementToSkill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EndorsementToSkill_User" Association="Virtual_CampusModel.FK_EndorsementToSkill_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_EndorsementToSkill" EntitySet="VC_EndorsementToSkill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Experience_User" Association="Virtual_CampusModel.FK_Experience_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Experience" EntitySet="VC_Experience" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_Interest_Link_VC_Interest_Category" Association="Virtual_CampusModel.FK_VC_Interest_Link_VC_Interest_Category">
+      <End Role="VC_Interest_Category" EntitySet="VC_Interest_Category" />
+      <End Role="VC_Interest_Link" EntitySet="VC_Interest_Link" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_UserToInterest_VC_Interest_Category" Association="Virtual_CampusModel.FK_VC_UserToInterest_VC_Interest_Category">
+      <End Role="VC_Interest_Category" EntitySet="VC_Interest_Category" />
+      <End Role="VC_UserToInterest" EntitySet="VC_UserToInterest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_Message_VC_UserToMessage" Association="Virtual_CampusModel.FK_VC_Message_VC_UserToMessage">
+      <End Role="VC_UserToMessage" EntitySet="VC_UserToMessage" />
+      <End Role="VC_Message" EntitySet="VC_Message" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_News_VC_News_Category" Association="Virtual_CampusModel.FK_VC_News_VC_News_Category">
+      <End Role="VC_News_Category" EntitySet="VC_News_Category" />
+      <End Role="VC_News_Link" EntitySet="VC_News_Link" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_UserToNews_VC_News_Category" Association="Virtual_CampusModel.FK_VC_UserToNews_VC_News_Category">
+      <End Role="VC_News_Category" EntitySet="VC_News_Category" />
+      <End Role="VC_UserToNews" EntitySet="VC_UserToNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Opportunities_User" Association="Virtual_CampusModel.FK_Opportunities_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Opportunities" EntitySet="VC_Opportunities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_Comment_Post" Association="Virtual_CampusModel.FK_Post_Comment_Post">
+      <End Role="VC_Post" EntitySet="VC_Post" />
+      <End Role="VC_Post_Comment" EntitySet="VC_Post_Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_WorkspaceUser" Association="Virtual_CampusModel.FK_Post_WorkspaceUser">
+      <End Role="VC_WorkspaceUser" EntitySet="VC_WorkspaceUser" />
+      <End Role="VC_Post" EntitySet="VC_Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_Comment_WorkspaceUser" Association="Virtual_CampusModel.FK_Post_Comment_WorkspaceUser">
+      <End Role="VC_WorkspaceUser" EntitySet="VC_WorkspaceUser" />
+      <End Role="VC_Post_Comment" EntitySet="VC_Post_Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recommendation_Staff" Association="Virtual_CampusModel.FK_Recommendation_Staff">
+      <End Role="VC_Staff" EntitySet="VC_Staff" />
+      <End Role="VC_Recommendation" EntitySet="VC_Recommendation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recommendation_User" Association="Virtual_CampusModel.FK_Recommendation_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Recommendation" EntitySet="VC_Recommendation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_User" Association="Virtual_CampusModel.FK_Report_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Report" EntitySet="VC_Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Review_Comment_Review_Master" Association="Virtual_CampusModel.FK_Review_Comment_Review_Master">
+      <End Role="VC_Review_Master" EntitySet="VC_Review_Master" />
+      <End Role="VC_Review_Comment" EntitySet="VC_Review_Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Review_Comment_User" Association="Virtual_CampusModel.FK_Review_Comment_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Review_Comment" EntitySet="VC_Review_Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Review_Master_User" Association="Virtual_CampusModel.FK_Review_Master_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Review_Master" EntitySet="VC_Review_Master" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_Subcategory_Skill_Category" Association="Virtual_CampusModel.FK_Skill_Subcategory_Skill_Category">
+      <End Role="VC_Skill_Category" EntitySet="VC_Skill_Category" />
+      <End Role="VC_Skill_Subcategory" EntitySet="VC_Skill_Subcategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_Skill_Subcategory" Association="Virtual_CampusModel.FK_Skill_Skill_Subcategory">
+      <End Role="VC_Skill_Subcategory" EntitySet="VC_Skill_Subcategory" />
+      <End Role="VC_UserSkill" EntitySet="VC_UserSkill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Staff" Association="Virtual_CampusModel.FK_Task_Staff">
+      <End Role="VC_Staff" EntitySet="VC_Staff" />
+      <End Role="VC_Task" EntitySet="VC_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_Staff_VC_User" Association="Virtual_CampusModel.FK_VC_Staff_VC_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Staff" EntitySet="VC_Staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_Student_VC_User" Association="Virtual_CampusModel.FK_VC_Student_VC_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Student" EntitySet="VC_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_Workspace" Association="Virtual_CampusModel.FK_Task_Workspace">
+      <End Role="VC_Workspace" EntitySet="VC_Workspace" />
+      <End Role="VC_Task" EntitySet="VC_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Task_WorkspaceUser" Association="Virtual_CampusModel.FK_Task_WorkspaceUser">
+      <End Role="VC_WorkspaceUser" EntitySet="VC_WorkspaceUser" />
+      <End Role="VC_Task" EntitySet="VC_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityActivities_User" Association="Virtual_CampusModel.FK_UniversityActivities_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_UniversityActivities" EntitySet="VC_UniversityActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Skill_User" Association="Virtual_CampusModel.FK_Skill_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_UserSkill" EntitySet="VC_UserSkill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserToInterest_User" Association="Virtual_CampusModel.FK_UserToInterest_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_UserToInterest" EntitySet="VC_UserToInterest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserToMessage_User" Association="Virtual_CampusModel.FK_UserToMessage_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_UserToMessage" EntitySet="VC_UserToMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VC_UserToNews_VC_User" Association="Virtual_CampusModel.FK_VC_UserToNews_VC_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_UserToNews" EntitySet="VC_UserToNews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workspace_Staff" Association="Virtual_CampusModel.FK_Workspace_Staff">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_Workspace" EntitySet="VC_Workspace" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkspaceUser_User" Association="Virtual_CampusModel.FK_WorkspaceUser_User">
+      <End Role="VC_User" EntitySet="VC_User" />
+      <End Role="VC_WorkspaceUser" EntitySet="VC_WorkspaceUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkspaceUser_Workspace" Association="Virtual_CampusModel.FK_WorkspaceUser_Workspace">
+      <End Role="VC_Workspace" EntitySet="VC_Workspace" />
+      <End Role="VC_WorkspaceUser" EntitySet="VC_WorkspaceUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="VC_Achievement">
+    <Key>
+      <PropertyRef Name="Achievement_Id" />
+    </Key>
+    <Property Name="Achievement_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Areaofstudy_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="AchievementType" Type="Int32" Nullable="false" />
+    <Property Name="Achievement_Description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Areaofstudy" Relationship="Virtual_CampusModel.FK_Achievement_Areaofstudy" FromRole="VC_Achievement" ToRole="VC_Areaofstudy" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Achievement_User" FromRole="VC_Achievement" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Application">
+    <Key>
+      <PropertyRef Name="Application_Id" />
+    </Key>
+    <Property Name="Application_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkspaceUser_Id" Type="Int32" Nullable="false" />
+    <Property Name="Workspace_Id" Type="Int32" Nullable="false" />
+    <Property Name="Application_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DateLabel_1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TextLabel_1" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextLabel_2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextLabel_3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextLabel_4" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextLabel_5" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextArea_1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TextArea_2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TextArea_3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Workspace" Relationship="Virtual_CampusModel.FK_Application_Workspace" FromRole="VC_Application" ToRole="VC_Workspace" />
+    <NavigationProperty Name="VC_WorkspaceUser" Relationship="Virtual_CampusModel.FK_Application_WorkspaceUser" FromRole="VC_Application" ToRole="VC_WorkspaceUser" />
+    <NavigationProperty Name="VC_Post" Relationship="Virtual_CampusModel.FK_Post_Application" FromRole="VC_Application" ToRole="VC_Post" />
+  </EntityType>
+  <EntityType Name="VC_Areaofstudy">
+    <Key>
+      <PropertyRef Name="Areaofstudy_Id" />
+    </Key>
+    <Property Name="Areaofstudy_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Areaofstudy_Category_Id" Type="Int32" Nullable="false" />
+    <Property Name="Areaofstudy" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Achievement" Relationship="Virtual_CampusModel.FK_Achievement_Areaofstudy" FromRole="VC_Areaofstudy" ToRole="VC_Achievement" />
+    <NavigationProperty Name="VC_Areaofstudy_Category" Relationship="Virtual_CampusModel.FK_Areaofstudy_Areaofstudy_Category" FromRole="VC_Areaofstudy" ToRole="VC_Areaofstudy_Category" />
+    <NavigationProperty Name="VC_Experience" Relationship="Virtual_CampusModel.FK_Experience_Areaofstudy" FromRole="VC_Areaofstudy" ToRole="VC_Experience" />
+    <NavigationProperty Name="VC_Skill_Subcategory" Relationship="Virtual_CampusModel.FK_Skill_Subcategory_Areaofstudy" FromRole="VC_Areaofstudy" ToRole="VC_Skill_Subcategory" />
+    <NavigationProperty Name="VC_College" Relationship="Virtual_CampusModel.FK_VC_College_VC_Areaofstudy" FromRole="VC_Areaofstudy" ToRole="VC_College" />
+  </EntityType>
+  <EntityType Name="VC_Areaofstudy_Category">
+    <Key>
+      <PropertyRef Name="Areaofstudy_Category_Id" />
+    </Key>
+    <Property Name="Areaofstudy_Category_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Areaofstudy" Relationship="Virtual_CampusModel.FK_Areaofstudy_Areaofstudy_Category" FromRole="VC_Areaofstudy_Category" ToRole="VC_Areaofstudy" />
+  </EntityType>
+  <EntityType Name="VC_Blog_Comment">
+    <Key>
+      <PropertyRef Name="BlogComment_Id" />
+    </Key>
+    <Property Name="BlogComment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Blog_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Blog_Comment" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Blog_Master" Relationship="Virtual_CampusModel.FK_VC_Blog_Comment_VC_Blog_Master" FromRole="VC_Blog_Comment" ToRole="VC_Blog_Master" />
+  </EntityType>
+  <EntityType Name="VC_Blog_Master">
+    <Key>
+      <PropertyRef Name="Blog_Id" />
+    </Key>
+    <Property Name="Blog_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Blog_Title" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Blog_Content" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Blog_Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Blog_Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Blog_Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Blog_Video1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Blog_Video2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Blog_Comment" Relationship="Virtual_CampusModel.FK_VC_Blog_Comment_VC_Blog_Master" FromRole="VC_Blog_Master" ToRole="VC_Blog_Comment" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Blog_Master_User" FromRole="VC_Blog_Master" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_College">
+    <Key>
+      <PropertyRef Name="College_Id" />
+    </Key>
+    <Property Name="College_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="College_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AreaOfStudy_Id" Type="Int32" Nullable="false" />
+    <Property Name="College_Degree" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="University_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="College_EnrollmentYear" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="College_PassingYear" Type="Int32" Nullable="false" />
+    <Property Name="College_LiveBacklog" Type="Int32" />
+    <Property Name="College_TotalBacklog" Type="Int32" />
+    <Property Name="College_Result_Sem_1" Type="Double" />
+    <Property Name="College_Result_Sem_2" Type="Double" />
+    <Property Name="College_Result_Sem_3" Type="Double" />
+    <Property Name="College_Result_Sem_4" Type="Double" />
+    <Property Name="College_Result_Sem_5" Type="Double" />
+    <Property Name="College_Result_Sem_6" Type="Double" />
+    <Property Name="College_Result_Sem_7" Type="Double" />
+    <Property Name="College_Result_Sem_8" Type="Double" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Areaofstudy" Relationship="Virtual_CampusModel.FK_VC_College_VC_Areaofstudy" FromRole="VC_College" ToRole="VC_Areaofstudy" />
+    <NavigationProperty Name="VC_Education" Relationship="Virtual_CampusModel.FK_Education_College" FromRole="VC_College" ToRole="VC_Education" />
+  </EntityType>
+  <EntityType Name="VC_Discussion">
+    <Key>
+      <PropertyRef Name="Discussion_Id" />
+    </Key>
+    <Property Name="Discussion_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Discussion_Title" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Discussion_Content" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Discussion_Comment" Relationship="Virtual_CampusModel.FK_Discussion_Comment_Discussion" FromRole="VC_Discussion" ToRole="VC_Discussion_Comment" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Discussion_User" FromRole="VC_Discussion" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Discussion_Comment">
+    <Key>
+      <PropertyRef Name="DiscussionComment_Id" />
+    </Key>
+    <Property Name="DiscussionComment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Discussion_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Discussion_Comment" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Discussion" Relationship="Virtual_CampusModel.FK_Discussion_Comment_Discussion" FromRole="VC_Discussion_Comment" ToRole="VC_Discussion" />
+  </EntityType>
+  <EntityType Name="VC_Education">
+    <Key>
+      <PropertyRef Name="Education_Id" />
+    </Key>
+    <Property Name="Education_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="School_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="College_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_College" Relationship="Virtual_CampusModel.FK_Education_College" FromRole="VC_Education" ToRole="VC_College" />
+    <NavigationProperty Name="VC_School" Relationship="Virtual_CampusModel.FK_Education_School" FromRole="VC_Education" ToRole="VC_School" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Education_User" FromRole="VC_Education" ToRole="VC_User" />
+    <NavigationProperty Name="VC_ProfessionalCourse" Relationship="Virtual_CampusModel.FK_ProfessionalCourse_Education" FromRole="VC_Education" ToRole="VC_ProfessionalCourse" />
+  </EntityType>
+  <EntityType Name="VC_EndorsementToSkill">
+    <Key>
+      <PropertyRef Name="Endorsement_Id" />
+    </Key>
+    <Property Name="Endorsement_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserSkill_Id" Type="Int32" Nullable="false" />
+    <Property Name="From_User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_UserSkill" Relationship="Virtual_CampusModel.FK_EndorsementToSkill_Skill" FromRole="VC_EndorsementToSkill" ToRole="VC_UserSkill" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_EndorsementToSkill_User" FromRole="VC_EndorsementToSkill" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Experience">
+    <Key>
+      <PropertyRef Name="Experience_Id" />
+    </Key>
+    <Property Name="Experience_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Areaofstudy_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Experience_Type" Type="Int32" Nullable="false" />
+    <Property Name="WorkExperience" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Experience_Description" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Areaofstudy" Relationship="Virtual_CampusModel.FK_Experience_Areaofstudy" FromRole="VC_Experience" ToRole="VC_Areaofstudy" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Experience_User" FromRole="VC_Experience" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Interest_Category">
+    <Key>
+      <PropertyRef Name="InterestCategory_Id" />
+    </Key>
+    <Property Name="InterestCategory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Interest_Link" Relationship="Virtual_CampusModel.FK_VC_Interest_Link_VC_Interest_Category" FromRole="VC_Interest_Category" ToRole="VC_Interest_Link" />
+    <NavigationProperty Name="VC_UserToInterest" Relationship="Virtual_CampusModel.FK_VC_UserToInterest_VC_Interest_Category" FromRole="VC_Interest_Category" ToRole="VC_UserToInterest" />
+  </EntityType>
+  <EntityType Name="VC_Interest_Link">
+    <Key>
+      <PropertyRef Name="Interest_Id" />
+    </Key>
+    <Property Name="Interest_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InterestCategory_Id" Type="Int32" Nullable="false" />
+    <Property Name="Interest_Link" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Interest_Description_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Interest_Category" Relationship="Virtual_CampusModel.FK_VC_Interest_Link_VC_Interest_Category" FromRole="VC_Interest_Link" ToRole="VC_Interest_Category" />
+  </EntityType>
+  <EntityType Name="VC_Message">
+    <Key>
+      <PropertyRef Name="Message_Id" />
+    </Key>
+    <Property Name="Message_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserToMessage_Id" Type="Int32" Nullable="false" />
+    <Property Name="Message_Details" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Message_From_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_UserToMessage" Relationship="Virtual_CampusModel.FK_VC_Message_VC_UserToMessage" FromRole="VC_Message" ToRole="VC_UserToMessage" />
+  </EntityType>
+  <EntityType Name="VC_News_Category">
+    <Key>
+      <PropertyRef Name="NewsCategory_Id" />
+    </Key>
+    <Property Name="NewsCategory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_News_Link" Relationship="Virtual_CampusModel.FK_VC_News_VC_News_Category" FromRole="VC_News_Category" ToRole="VC_News_Link" />
+    <NavigationProperty Name="VC_UserToNews" Relationship="Virtual_CampusModel.FK_VC_UserToNews_VC_News_Category" FromRole="VC_News_Category" ToRole="VC_UserToNews" />
+  </EntityType>
+  <EntityType Name="VC_News_Link">
+    <Key>
+      <PropertyRef Name="News_Id" />
+    </Key>
+    <Property Name="News_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewsCategory_Id" Type="Int32" Nullable="false" />
+    <Property Name="News_Link" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="News_Description_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_News_Category" Relationship="Virtual_CampusModel.FK_VC_News_VC_News_Category" FromRole="VC_News_Link" ToRole="VC_News_Category" />
+  </EntityType>
+  <EntityType Name="VC_Opportunities">
+    <Key>
+      <PropertyRef Name="Opportunity_Id" />
+    </Key>
+    <Property Name="Opportunity_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Opportunity_Title" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Opportunity_Description" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Opportunity_Contact" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Opportunities_User" FromRole="VC_Opportunities" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Post">
+    <Key>
+      <PropertyRef Name="Post_Id" />
+    </Key>
+    <Property Name="Post_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Application_Id" Type="Int32" Nullable="false" />
+    <Property Name="WorkspaceUser_Id" Type="Int32" Nullable="false" />
+    <Property Name="Post_Date" Type="DateTime" Nullable="false" />
+    <Property Name="TextField_1" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextField_2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextField_3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextField_4" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextField_5" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TextArea_1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TextArea_2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TextArea_3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Application" Relationship="Virtual_CampusModel.FK_Post_Application" FromRole="VC_Post" ToRole="VC_Application" />
+    <NavigationProperty Name="VC_Post_Comment" Relationship="Virtual_CampusModel.FK_Post_Comment_Post" FromRole="VC_Post" ToRole="VC_Post_Comment" />
+    <NavigationProperty Name="VC_WorkspaceUser" Relationship="Virtual_CampusModel.FK_Post_WorkspaceUser" FromRole="VC_Post" ToRole="VC_WorkspaceUser" />
+  </EntityType>
+  <EntityType Name="VC_Post_Comment">
+    <Key>
+      <PropertyRef Name="PostComment_Id" />
+    </Key>
+    <Property Name="PostComment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Post_Id" Type="Int32" Nullable="false" />
+    <Property Name="WorkspaceUser_Id" Type="Int32" Nullable="false" />
+    <Property Name="Post_Comment" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Post" Relationship="Virtual_CampusModel.FK_Post_Comment_Post" FromRole="VC_Post_Comment" ToRole="VC_Post" />
+    <NavigationProperty Name="VC_WorkspaceUser" Relationship="Virtual_CampusModel.FK_Post_Comment_WorkspaceUser" FromRole="VC_Post_Comment" ToRole="VC_WorkspaceUser" />
+  </EntityType>
+  <EntityType Name="VC_ProfessionalCourse">
+    <Key>
+      <PropertyRef Name="ProfessionalCourse_Id" />
+    </Key>
+    <Property Name="ProfessionalCourse_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Education_Id" Type="Int32" Nullable="false" />
+    <Property Name="ProfessionalCourse_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProfessionalCourse_Institute" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProfessionalCourse_Place" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ProfessionalCourse_Certificate" Type="Int32" Nullable="false" />
+    <Property Name="ProfessionalCourse_PassingYear" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Education" Relationship="Virtual_CampusModel.FK_ProfessionalCourse_Education" FromRole="VC_ProfessionalCourse" ToRole="VC_Education" />
+  </EntityType>
+  <EntityType Name="VC_Recommendation">
+    <Key>
+      <PropertyRef Name="Recommendation_Id" />
+    </Key>
+    <Property Name="Recommendation_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Faculty_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Areaofrec" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Recommendation" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updates_TS" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="VC_Staff" Relationship="Virtual_CampusModel.FK_Recommendation_Staff" FromRole="VC_Recommendation" ToRole="VC_Staff" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Recommendation_User" FromRole="VC_Recommendation" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Report">
+    <Key>
+      <PropertyRef Name="Report_Id" />
+    </Key>
+    <Property Name="Report_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Social_Report" Type="Int32" Nullable="false" />
+    <Property Name="Leadership_Report" Type="Int32" Nullable="false" />
+    <Property Name="Academic_Report" Type="Int32" Nullable="false" />
+    <Property Name="Personality_Report" Type="Int32" Nullable="false" />
+    <Property Name="EQ_Report" Type="Int32" Nullable="false" />
+    <Property Name="Report_Month" Type="DateTime" Nullable="false" />
+    <Property Name="Report_Year" Type="DateTime" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Report_User" FromRole="VC_Report" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Review_Comment">
+    <Key>
+      <PropertyRef Name="ReviewComment_Id" />
+    </Key>
+    <Property Name="ReviewComment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Review_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Review_Comment" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Review_Master" Relationship="Virtual_CampusModel.FK_Review_Comment_Review_Master" FromRole="VC_Review_Comment" ToRole="VC_Review_Master" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Review_Comment_User" FromRole="VC_Review_Comment" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Review_Master">
+    <Key>
+      <PropertyRef Name="Review_Id" />
+    </Key>
+    <Property Name="Review_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Review_Title" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Review_Content" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Review_Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Review_Category" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Review_Ratings" Type="Int32" Nullable="false" />
+    <Property Name="Review_Map" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Review_Comment" Relationship="Virtual_CampusModel.FK_Review_Comment_Review_Master" FromRole="VC_Review_Master" ToRole="VC_Review_Comment" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Review_Master_User" FromRole="VC_Review_Master" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_School">
+    <Key>
+      <PropertyRef Name="School_Id" />
+    </Key>
+    <Property Name="School_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="School_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="School_Medium" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SSC_Score" Type="Double" Nullable="false" />
+    <Property Name="SSC_Board" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SSC_PassingYear" Type="Int32" Nullable="false" />
+    <Property Name="HSC_Stream" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="HSC_Score" Type="Double" Nullable="false" />
+    <Property Name="HSC_Board" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="HSC_PassingYear" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Education" Relationship="Virtual_CampusModel.FK_Education_School" FromRole="VC_School" ToRole="VC_Education" />
+  </EntityType>
+  <EntityType Name="VC_Skill_Category">
+    <Key>
+      <PropertyRef Name="Skill_Category_Id" />
+    </Key>
+    <Property Name="Skill_Category_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill_Category_Name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Skill_Subcategory" Relationship="Virtual_CampusModel.FK_Skill_Subcategory_Skill_Category" FromRole="VC_Skill_Category" ToRole="VC_Skill_Subcategory" />
+  </EntityType>
+  <EntityType Name="VC_Skill_Subcategory">
+    <Key>
+      <PropertyRef Name="Skill_Subcategory_Id" />
+    </Key>
+    <Property Name="Skill_Subcategory_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill_Category_Id" Type="Int32" Nullable="false" />
+    <Property Name="Areaofstudy_Id" Type="Int32" Nullable="false" />
+    <Property Name="Skill_Subcategory_Name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Areaofstudy" Relationship="Virtual_CampusModel.FK_Skill_Subcategory_Areaofstudy" FromRole="VC_Skill_Subcategory" ToRole="VC_Areaofstudy" />
+    <NavigationProperty Name="VC_Skill_Category" Relationship="Virtual_CampusModel.FK_Skill_Subcategory_Skill_Category" FromRole="VC_Skill_Subcategory" ToRole="VC_Skill_Category" />
+    <NavigationProperty Name="VC_UserSkill" Relationship="Virtual_CampusModel.FK_Skill_Skill_Subcategory" FromRole="VC_Skill_Subcategory" ToRole="VC_UserSkill" />
+  </EntityType>
+  <EntityType Name="VC_Staff">
+    <Key>
+      <PropertyRef Name="Staff_Id" />
+    </Key>
+    <Property Name="Staff_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Staff_Name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Staff_Department" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Staff_College" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Staff_Gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Staff_LibraryId" Type="Int32" Nullable="false" />
+    <Property Name="Staff_Designation" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Staff_EmailId" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Staff_ContactNo" Type="Int32" />
+    <Property Name="Staff_Birthdate" Type="DateTime" Nullable="false" />
+    <Property Name="Staff_Security_Que" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Staff_Security_Ans" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Recommendation" Relationship="Virtual_CampusModel.FK_Recommendation_Staff" FromRole="VC_Staff" ToRole="VC_Recommendation" />
+    <NavigationProperty Name="VC_Task" Relationship="Virtual_CampusModel.FK_Task_Staff" FromRole="VC_Staff" ToRole="VC_Task" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_VC_Staff_VC_User" FromRole="VC_Staff" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Student">
+    <Key>
+      <PropertyRef Name="Student_Index" />
+    </Key>
+    <Property Name="Student_Index" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Student_Department" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Student_College" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="Student_Gender" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="Student_EnrollYear" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_LibraryId" Type="Int32" Nullable="false" />
+    <Property Name="Student_EnrollmentNo" Type="Int32" Nullable="false" />
+    <Property Name="Student_EmailId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Student_ContactNo" Type="Int32" Nullable="false" />
+    <Property Name="Student_Birthdate" Type="DateTime" Nullable="false" />
+    <Property Name="Student_Hometown" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Student_Security_Que" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Student_Security_Ans" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_VC_Student_VC_User" FromRole="VC_Student" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Task">
+    <Key>
+      <PropertyRef Name="Task_Id" />
+    </Key>
+    <Property Name="Task_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkspaceUser_Id" Type="Int32" Nullable="false" />
+    <Property Name="Workspace_Id" Type="Int32" Nullable="false" />
+    <Property Name="Faculty_Id" Type="Int32" Nullable="false" />
+    <Property Name="Task_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Task_Deadline" Type="DateTime" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Staff" Relationship="Virtual_CampusModel.FK_Task_Staff" FromRole="VC_Task" ToRole="VC_Staff" />
+    <NavigationProperty Name="VC_Workspace" Relationship="Virtual_CampusModel.FK_Task_Workspace" FromRole="VC_Task" ToRole="VC_Workspace" />
+    <NavigationProperty Name="VC_WorkspaceUser" Relationship="Virtual_CampusModel.FK_Task_WorkspaceUser" FromRole="VC_Task" ToRole="VC_WorkspaceUser" />
+  </EntityType>
+  <EntityType Name="VC_UniversityActivities">
+    <Key>
+      <PropertyRef Name="UniversityActivity_Id" />
+    </Key>
+    <Property Name="UniversityActivity_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="UniversityActivity_Title" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="UniversityActivity_Desc" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="UniversityActivity_Contact" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UniversityActivity__Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_UniversityActivities_User" FromRole="VC_UniversityActivities" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_User">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="User_Password" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="User_Privilage" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Achievement" Relationship="Virtual_CampusModel.FK_Achievement_User" FromRole="VC_User" ToRole="VC_Achievement" />
+    <NavigationProperty Name="VC_Blog_Master" Relationship="Virtual_CampusModel.FK_Blog_Master_User" FromRole="VC_User" ToRole="VC_Blog_Master" />
+    <NavigationProperty Name="VC_Discussion" Relationship="Virtual_CampusModel.FK_Discussion_User" FromRole="VC_User" ToRole="VC_Discussion" />
+    <NavigationProperty Name="VC_Education" Relationship="Virtual_CampusModel.FK_Education_User" FromRole="VC_User" ToRole="VC_Education" />
+    <NavigationProperty Name="VC_EndorsementToSkill" Relationship="Virtual_CampusModel.FK_EndorsementToSkill_User" FromRole="VC_User" ToRole="VC_EndorsementToSkill" />
+    <NavigationProperty Name="VC_Experience" Relationship="Virtual_CampusModel.FK_Experience_User" FromRole="VC_User" ToRole="VC_Experience" />
+    <NavigationProperty Name="VC_Opportunities" Relationship="Virtual_CampusModel.FK_Opportunities_User" FromRole="VC_User" ToRole="VC_Opportunities" />
+    <NavigationProperty Name="VC_Recommendation" Relationship="Virtual_CampusModel.FK_Recommendation_User" FromRole="VC_User" ToRole="VC_Recommendation" />
+    <NavigationProperty Name="VC_Report" Relationship="Virtual_CampusModel.FK_Report_User" FromRole="VC_User" ToRole="VC_Report" />
+    <NavigationProperty Name="VC_Review_Comment" Relationship="Virtual_CampusModel.FK_Review_Comment_User" FromRole="VC_User" ToRole="VC_Review_Comment" />
+    <NavigationProperty Name="VC_Review_Master" Relationship="Virtual_CampusModel.FK_Review_Master_User" FromRole="VC_User" ToRole="VC_Review_Master" />
+    <NavigationProperty Name="VC_Staff" Relationship="Virtual_CampusModel.FK_VC_Staff_VC_User" FromRole="VC_User" ToRole="VC_Staff" />
+    <NavigationProperty Name="VC_Student" Relationship="Virtual_CampusModel.FK_VC_Student_VC_User" FromRole="VC_User" ToRole="VC_Student" />
+    <NavigationProperty Name="VC_UniversityActivities" Relationship="Virtual_CampusModel.FK_UniversityActivities_User" FromRole="VC_User" ToRole="VC_UniversityActivities" />
+    <NavigationProperty Name="VC_UserSkill" Relationship="Virtual_CampusModel.FK_Skill_User" FromRole="VC_User" ToRole="VC_UserSkill" />
+    <NavigationProperty Name="VC_UserToInterest" Relationship="Virtual_CampusModel.FK_UserToInterest_User" FromRole="VC_User" ToRole="VC_UserToInterest" />
+    <NavigationProperty Name="VC_UserToMessage" Relationship="Virtual_CampusModel.FK_UserToMessage_User" FromRole="VC_User" ToRole="VC_UserToMessage" />
+    <NavigationProperty Name="VC_UserToNews" Relationship="Virtual_CampusModel.FK_VC_UserToNews_VC_User" FromRole="VC_User" ToRole="VC_UserToNews" />
+    <NavigationProperty Name="VC_Workspace" Relationship="Virtual_CampusModel.FK_Workspace_Staff" FromRole="VC_User" ToRole="VC_Workspace" />
+    <NavigationProperty Name="VC_WorkspaceUser" Relationship="Virtual_CampusModel.FK_WorkspaceUser_User" FromRole="VC_User" ToRole="VC_WorkspaceUser" />
+  </EntityType>
+  <EntityType Name="VC_UserSkill">
+    <Key>
+      <PropertyRef Name="UserSkill_Id" />
+    </Key>
+    <Property Name="UserSkill_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill_Subcategory_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_EndorsementToSkill" Relationship="Virtual_CampusModel.FK_EndorsementToSkill_Skill" FromRole="VC_UserSkill" ToRole="VC_EndorsementToSkill" />
+    <NavigationProperty Name="VC_Skill_Subcategory" Relationship="Virtual_CampusModel.FK_Skill_Skill_Subcategory" FromRole="VC_UserSkill" ToRole="VC_Skill_Subcategory" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Skill_User" FromRole="VC_UserSkill" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_UserToInterest">
+    <Key>
+      <PropertyRef Name="UserToInterest_Id" />
+    </Key>
+    <Property Name="UserToInterest_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InterestCategory_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Interest_Category" Relationship="Virtual_CampusModel.FK_VC_UserToInterest_VC_Interest_Category" FromRole="VC_UserToInterest" ToRole="VC_Interest_Category" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_UserToInterest_User" FromRole="VC_UserToInterest" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_UserToMessage">
+    <Key>
+      <PropertyRef Name="UserToMessage_Id" />
+    </Key>
+    <Property Name="UserToMessage_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id_1" Type="Int32" Nullable="false" />
+    <Property Name="User_Id_2" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Message" Relationship="Virtual_CampusModel.FK_VC_Message_VC_UserToMessage" FromRole="VC_UserToMessage" ToRole="VC_Message" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_UserToMessage_User" FromRole="VC_UserToMessage" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_UserToNews">
+    <Key>
+      <PropertyRef Name="UserToNews_Id" />
+    </Key>
+    <Property Name="UserToNews_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewsCategory_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_News_Category" Relationship="Virtual_CampusModel.FK_VC_UserToNews_VC_News_Category" FromRole="VC_UserToNews" ToRole="VC_News_Category" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_VC_UserToNews_VC_User" FromRole="VC_UserToNews" ToRole="VC_User" />
+  </EntityType>
+  <EntityType Name="VC_Workspace">
+    <Key>
+      <PropertyRef Name="Workspace_Id" />
+    </Key>
+    <Property Name="Workspace_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Owner_User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Workspace_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Application" Relationship="Virtual_CampusModel.FK_Application_Workspace" FromRole="VC_Workspace" ToRole="VC_Application" />
+    <NavigationProperty Name="VC_Task" Relationship="Virtual_CampusModel.FK_Task_Workspace" FromRole="VC_Workspace" ToRole="VC_Task" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_Workspace_Staff" FromRole="VC_Workspace" ToRole="VC_User" />
+    <NavigationProperty Name="VC_WorkspaceUser" Relationship="Virtual_CampusModel.FK_WorkspaceUser_Workspace" FromRole="VC_Workspace" ToRole="VC_WorkspaceUser" />
+  </EntityType>
+  <EntityType Name="VC_WorkspaceUser">
+    <Key>
+      <PropertyRef Name="WorkspaceUser_Id" />
+    </Key>
+    <Property Name="WorkspaceUser_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Workspace_Id" Type="Int32" Nullable="false" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Created_TS" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_TS" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="VC_Application" Relationship="Virtual_CampusModel.FK_Application_WorkspaceUser" FromRole="VC_WorkspaceUser" ToRole="VC_Application" />
+    <NavigationProperty Name="VC_Post" Relationship="Virtual_CampusModel.FK_Post_WorkspaceUser" FromRole="VC_WorkspaceUser" ToRole="VC_Post" />
+    <NavigationProperty Name="VC_Post_Comment" Relationship="Virtual_CampusModel.FK_Post_Comment_WorkspaceUser" FromRole="VC_WorkspaceUser" ToRole="VC_Post_Comment" />
+    <NavigationProperty Name="VC_Task" Relationship="Virtual_CampusModel.FK_Task_WorkspaceUser" FromRole="VC_WorkspaceUser" ToRole="VC_Task" />
+    <NavigationProperty Name="VC_User" Relationship="Virtual_CampusModel.FK_WorkspaceUser_User" FromRole="VC_WorkspaceUser" ToRole="VC_User" />
+    <NavigationProperty Name="VC_Workspace" Relationship="Virtual_CampusModel.FK_WorkspaceUser_Workspace" FromRole="VC_WorkspaceUser" ToRole="VC_Workspace" />
+  </EntityType>
+  <Association Name="FK_Achievement_Areaofstudy">
+    <End Role="VC_Areaofstudy" Type="Virtual_CampusModel.VC_Areaofstudy" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Achievement" Type="Virtual_CampusModel.VC_Achievement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Areaofstudy">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Principal>
+      <Dependent Role="VC_Achievement">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Achievement_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Achievement" Type="Virtual_CampusModel.VC_Achievement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Achievement">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Application_Workspace">
+    <End Role="VC_Workspace" Type="Virtual_CampusModel.VC_Workspace" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Application" Type="Virtual_CampusModel.VC_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Workspace">
+        <PropertyRef Name="Workspace_Id" />
+      </Principal>
+      <Dependent Role="VC_Application">
+        <PropertyRef Name="Workspace_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Application_WorkspaceUser">
+    <End Role="VC_WorkspaceUser" Type="Virtual_CampusModel.VC_WorkspaceUser" Multiplicity="1" />
+    <End Role="VC_Application" Type="Virtual_CampusModel.VC_Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_WorkspaceUser">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Principal>
+      <Dependent Role="VC_Application">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_Application">
+    <End Role="VC_Application" Type="Virtual_CampusModel.VC_Application" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Post" Type="Virtual_CampusModel.VC_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Application">
+        <PropertyRef Name="Application_Id" />
+      </Principal>
+      <Dependent Role="VC_Post">
+        <PropertyRef Name="Application_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Areaofstudy_Areaofstudy_Category">
+    <End Role="VC_Areaofstudy_Category" Type="Virtual_CampusModel.VC_Areaofstudy_Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Areaofstudy" Type="Virtual_CampusModel.VC_Areaofstudy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Areaofstudy_Category">
+        <PropertyRef Name="Areaofstudy_Category_Id" />
+      </Principal>
+      <Dependent Role="VC_Areaofstudy">
+        <PropertyRef Name="Areaofstudy_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Experience_Areaofstudy">
+    <End Role="VC_Areaofstudy" Type="Virtual_CampusModel.VC_Areaofstudy" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Experience" Type="Virtual_CampusModel.VC_Experience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Areaofstudy">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Principal>
+      <Dependent Role="VC_Experience">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_Subcategory_Areaofstudy">
+    <End Role="VC_Areaofstudy" Type="Virtual_CampusModel.VC_Areaofstudy" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Skill_Subcategory" Type="Virtual_CampusModel.VC_Skill_Subcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Areaofstudy">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Principal>
+      <Dependent Role="VC_Skill_Subcategory">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_College_VC_Areaofstudy">
+    <End Role="VC_Areaofstudy" Type="Virtual_CampusModel.VC_Areaofstudy" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_College" Type="Virtual_CampusModel.VC_College" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Areaofstudy">
+        <PropertyRef Name="Areaofstudy_Id" />
+      </Principal>
+      <Dependent Role="VC_College">
+        <PropertyRef Name="AreaOfStudy_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_Blog_Comment_VC_Blog_Master">
+    <End Role="VC_Blog_Master" Type="Virtual_CampusModel.VC_Blog_Master" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Blog_Comment" Type="Virtual_CampusModel.VC_Blog_Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Blog_Master">
+        <PropertyRef Name="Blog_Id" />
+      </Principal>
+      <Dependent Role="VC_Blog_Comment">
+        <PropertyRef Name="Blog_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Blog_Master_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Blog_Master" Type="Virtual_CampusModel.VC_Blog_Master" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Blog_Master">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Education_College">
+    <End Role="VC_College" Type="Virtual_CampusModel.VC_College" Multiplicity="1" />
+    <End Role="VC_Education" Type="Virtual_CampusModel.VC_Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_College">
+        <PropertyRef Name="College_Id" />
+      </Principal>
+      <Dependent Role="VC_Education">
+        <PropertyRef Name="College_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Discussion_Comment_Discussion">
+    <End Role="VC_Discussion" Type="Virtual_CampusModel.VC_Discussion" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Discussion_Comment" Type="Virtual_CampusModel.VC_Discussion_Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Discussion">
+        <PropertyRef Name="Discussion_Id" />
+      </Principal>
+      <Dependent Role="VC_Discussion_Comment">
+        <PropertyRef Name="Discussion_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Discussion_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Discussion" Type="Virtual_CampusModel.VC_Discussion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Discussion">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Education_School">
+    <End Role="VC_School" Type="Virtual_CampusModel.VC_School" Multiplicity="1" />
+    <End Role="VC_Education" Type="Virtual_CampusModel.VC_Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_School">
+        <PropertyRef Name="School_Id" />
+      </Principal>
+      <Dependent Role="VC_Education">
+        <PropertyRef Name="School_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Education_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Education" Type="Virtual_CampusModel.VC_Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Education">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfessionalCourse_Education">
+    <End Role="VC_Education" Type="Virtual_CampusModel.VC_Education" Multiplicity="1" />
+    <End Role="VC_ProfessionalCourse" Type="Virtual_CampusModel.VC_ProfessionalCourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Education">
+        <PropertyRef Name="Education_Id" />
+      </Principal>
+      <Dependent Role="VC_ProfessionalCourse">
+        <PropertyRef Name="Education_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EndorsementToSkill_Skill">
+    <End Role="VC_UserSkill" Type="Virtual_CampusModel.VC_UserSkill" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_EndorsementToSkill" Type="Virtual_CampusModel.VC_EndorsementToSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_UserSkill">
+        <PropertyRef Name="UserSkill_Id" />
+      </Principal>
+      <Dependent Role="VC_EndorsementToSkill">
+        <PropertyRef Name="UserSkill_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EndorsementToSkill_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_EndorsementToSkill" Type="Virtual_CampusModel.VC_EndorsementToSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_EndorsementToSkill">
+        <PropertyRef Name="From_User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Experience_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Experience" Type="Virtual_CampusModel.VC_Experience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Experience">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_Interest_Link_VC_Interest_Category">
+    <End Role="VC_Interest_Category" Type="Virtual_CampusModel.VC_Interest_Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Interest_Link" Type="Virtual_CampusModel.VC_Interest_Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Interest_Category">
+        <PropertyRef Name="InterestCategory_Id" />
+      </Principal>
+      <Dependent Role="VC_Interest_Link">
+        <PropertyRef Name="InterestCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_UserToInterest_VC_Interest_Category">
+    <End Role="VC_Interest_Category" Type="Virtual_CampusModel.VC_Interest_Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_UserToInterest" Type="Virtual_CampusModel.VC_UserToInterest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Interest_Category">
+        <PropertyRef Name="InterestCategory_Id" />
+      </Principal>
+      <Dependent Role="VC_UserToInterest">
+        <PropertyRef Name="InterestCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_Message_VC_UserToMessage">
+    <End Role="VC_UserToMessage" Type="Virtual_CampusModel.VC_UserToMessage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Message" Type="Virtual_CampusModel.VC_Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_UserToMessage">
+        <PropertyRef Name="UserToMessage_Id" />
+      </Principal>
+      <Dependent Role="VC_Message">
+        <PropertyRef Name="UserToMessage_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_News_VC_News_Category">
+    <End Role="VC_News_Category" Type="Virtual_CampusModel.VC_News_Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_News_Link" Type="Virtual_CampusModel.VC_News_Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_News_Category">
+        <PropertyRef Name="NewsCategory_Id" />
+      </Principal>
+      <Dependent Role="VC_News_Link">
+        <PropertyRef Name="NewsCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_UserToNews_VC_News_Category">
+    <End Role="VC_News_Category" Type="Virtual_CampusModel.VC_News_Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_UserToNews" Type="Virtual_CampusModel.VC_UserToNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_News_Category">
+        <PropertyRef Name="NewsCategory_Id" />
+      </Principal>
+      <Dependent Role="VC_UserToNews">
+        <PropertyRef Name="NewsCategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Opportunities_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Opportunities" Type="Virtual_CampusModel.VC_Opportunities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Opportunities">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_Comment_Post">
+    <End Role="VC_Post" Type="Virtual_CampusModel.VC_Post" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Post_Comment" Type="Virtual_CampusModel.VC_Post_Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Post">
+        <PropertyRef Name="Post_Id" />
+      </Principal>
+      <Dependent Role="VC_Post_Comment">
+        <PropertyRef Name="Post_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_WorkspaceUser">
+    <End Role="VC_WorkspaceUser" Type="Virtual_CampusModel.VC_WorkspaceUser" Multiplicity="1" />
+    <End Role="VC_Post" Type="Virtual_CampusModel.VC_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_WorkspaceUser">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Principal>
+      <Dependent Role="VC_Post">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_Comment_WorkspaceUser">
+    <End Role="VC_WorkspaceUser" Type="Virtual_CampusModel.VC_WorkspaceUser" Multiplicity="1" />
+    <End Role="VC_Post_Comment" Type="Virtual_CampusModel.VC_Post_Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_WorkspaceUser">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Principal>
+      <Dependent Role="VC_Post_Comment">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recommendation_Staff">
+    <End Role="VC_Staff" Type="Virtual_CampusModel.VC_Staff" Multiplicity="1" />
+    <End Role="VC_Recommendation" Type="Virtual_CampusModel.VC_Recommendation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Staff">
+        <PropertyRef Name="Staff_Id" />
+      </Principal>
+      <Dependent Role="VC_Recommendation">
+        <PropertyRef Name="Faculty_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recommendation_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Recommendation" Type="Virtual_CampusModel.VC_Recommendation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Recommendation">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_Report" Type="Virtual_CampusModel.VC_Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Report">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Review_Comment_Review_Master">
+    <End Role="VC_Review_Master" Type="Virtual_CampusModel.VC_Review_Master" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Review_Comment" Type="Virtual_CampusModel.VC_Review_Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Review_Master">
+        <PropertyRef Name="Review_Id" />
+      </Principal>
+      <Dependent Role="VC_Review_Comment">
+        <PropertyRef Name="Review_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Review_Comment_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_Review_Comment" Type="Virtual_CampusModel.VC_Review_Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Review_Comment">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Review_Master_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_Review_Master" Type="Virtual_CampusModel.VC_Review_Master" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Review_Master">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_Subcategory_Skill_Category">
+    <End Role="VC_Skill_Category" Type="Virtual_CampusModel.VC_Skill_Category" Multiplicity="1" />
+    <End Role="VC_Skill_Subcategory" Type="Virtual_CampusModel.VC_Skill_Subcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Skill_Category">
+        <PropertyRef Name="Skill_Category_Id" />
+      </Principal>
+      <Dependent Role="VC_Skill_Subcategory">
+        <PropertyRef Name="Skill_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_Skill_Subcategory">
+    <End Role="VC_Skill_Subcategory" Type="Virtual_CampusModel.VC_Skill_Subcategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_UserSkill" Type="Virtual_CampusModel.VC_UserSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Skill_Subcategory">
+        <PropertyRef Name="Skill_Subcategory_Id" />
+      </Principal>
+      <Dependent Role="VC_UserSkill">
+        <PropertyRef Name="Skill_Subcategory_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Staff">
+    <End Role="VC_Staff" Type="Virtual_CampusModel.VC_Staff" Multiplicity="1" />
+    <End Role="VC_Task" Type="Virtual_CampusModel.VC_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Staff">
+        <PropertyRef Name="Staff_Id" />
+      </Principal>
+      <Dependent Role="VC_Task">
+        <PropertyRef Name="Faculty_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_Staff_VC_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_Staff" Type="Virtual_CampusModel.VC_Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Staff">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_Student_VC_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_Student" Type="Virtual_CampusModel.VC_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Student">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_Workspace">
+    <End Role="VC_Workspace" Type="Virtual_CampusModel.VC_Workspace" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_Task" Type="Virtual_CampusModel.VC_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Workspace">
+        <PropertyRef Name="Workspace_Id" />
+      </Principal>
+      <Dependent Role="VC_Task">
+        <PropertyRef Name="Workspace_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Task_WorkspaceUser">
+    <End Role="VC_WorkspaceUser" Type="Virtual_CampusModel.VC_WorkspaceUser" Multiplicity="1" />
+    <End Role="VC_Task" Type="Virtual_CampusModel.VC_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_WorkspaceUser">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Principal>
+      <Dependent Role="VC_Task">
+        <PropertyRef Name="WorkspaceUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityActivities_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_UniversityActivities" Type="Virtual_CampusModel.VC_UniversityActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_UniversityActivities">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Skill_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_UserSkill" Type="Virtual_CampusModel.VC_UserSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_UserSkill">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserToInterest_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_UserToInterest" Type="Virtual_CampusModel.VC_UserToInterest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_UserToInterest">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserToMessage_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_UserToMessage" Type="Virtual_CampusModel.VC_UserToMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_UserToMessage">
+        <PropertyRef Name="User_Id_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VC_UserToNews_VC_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_UserToNews" Type="Virtual_CampusModel.VC_UserToNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_UserToNews">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workspace_Staff">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1" />
+    <End Role="VC_Workspace" Type="Virtual_CampusModel.VC_Workspace" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_Workspace">
+        <PropertyRef Name="Owner_User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkspaceUser_User">
+    <End Role="VC_User" Type="Virtual_CampusModel.VC_User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_WorkspaceUser" Type="Virtual_CampusModel.VC_WorkspaceUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_User">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="VC_WorkspaceUser">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkspaceUser_Workspace">
+    <End Role="VC_Workspace" Type="Virtual_CampusModel.VC_Workspace" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VC_WorkspaceUser" Type="Virtual_CampusModel.VC_WorkspaceUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VC_Workspace">
+        <PropertyRef Name="Workspace_Id" />
+      </Principal>
+      <Dependent Role="VC_WorkspaceUser">
+        <PropertyRef Name="Workspace_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

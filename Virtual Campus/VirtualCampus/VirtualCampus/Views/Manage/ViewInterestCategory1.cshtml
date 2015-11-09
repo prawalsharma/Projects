@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Manage Content";
+}
+
+@model VirtualCampus.Models.InterestCategoryModel
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    &nbsp;
+        <table id="content-table" style="width:100%;">
+            
+            <tr id="content-tr">
+                <td style="width: 40px;"><p>Sno</p></td>
+                <td><p>Interest Category</p></td>
+                <td style="width: 45px;"><p>Edit</p></td>
+                <td style="width: 45px;"><p>Delete</p></td>
+            </tr>
+            
+            @foreach (var cat in @ViewBag.IntCat)
+            {   
+            <tr id="content-tr">
+                <td><p>@cat.InterestCategory_Id</p></td>
+                <td><p>
+                <a href="ViewInterest?k=@cat.InterestCategory_Id">@cat.Category_Name</a>
+                </p>
+                </td>
+                <td><p>@Html.ActionLink("Edit", "EditInterestCategory", new { k = @cat.InterestCategory_Id }, null)</p></td>
+                <td><p>@Html.ActionLink("Delete", "DeleteInterestCategory",  new{ id = @cat.InterestCategory_Id }, new { onclick = "return confirm('Are you sure?');"})</p></td>
+            </tr>
+            
+            }
+            
+        </table>
+
+    
+    
+    &nbsp;&nbsp;
+    @*
+    <script>
+    var deleteLinkObj;
+        // delete Link
+    $('.delete-link').click(function () {
+        alert("hie1");
+        deleteLinkObj = $(this).attr('id');  //for future use
+        $('#delete-dialog').dialog('open');
+        return false; // prevents the default behaviour
+    });</script>
+    
+    <script>
+        $('<div id="delete-dialog" title="Confirmation">
+            <p>Are you sure you want to delete this?</p>
+            </div>').dialog({
+            autoOpen: false, width: 400, resizable: false, modal: true, //Dialog options
+            buttons: {
+                "Continue": function () {
+                    alert("hi2");
+                    $.post(deleteLinkObj[0].href, function (data) {  //Post to action
+                        if (data == '<%= Boolean.TrueString %>') {
+                            deleteLinkObj.closest("tr").hide('fast'); //Hide Row
+                            //(optional) Display Confirmation
+                        }
+                        else {
+                            //(optional) Display Error
+                        }
+                    });
+                    $(this).dialog("close");
+                },
+                "Cancel": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    </script>
+    *@
+    <ul>
+        <li style="display: inline-block;">
+        @Html.ActionLink("AddInterest", "AddInterest", "Manage",null ,new { @class = "button" })
+        </li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News SubCategory" /></li>
+    </ul>  
+</div>
+
+
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

@@ -1,0 +1,70 @@
+﻿@model VirtualCampus.Models.UsersModel
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Registration";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+    <link href="~/Content/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="main-header">
+    </div>
+    <div id="register-panel" class="shadow">
+        <div id="register-head-panel">
+            <p>
+                Registration - Page 1</p>
+        </div>
+        <p>
+            The username is unique for every user in the system. Please select the username
+            and password of your choice.
+        </p>
+        <table>
+            @using (Html.BeginForm("Register1", "system"))
+            {
+                
+                         @Html.Hidden("hidden", (int)@ViewBag.priv)
+                <tr>
+                    <td>
+                        <p> 
+                         Username: 
+                        </p>
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.User_Name, new { Value = @ViewBag.email, @class = "searchTextBox" })
+                        @Html.ValidationMessageFor(model => model.User_Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Password</p>
+                    </td>
+                    <td>@Html.PasswordFor(model => model.User_Password, new { @class = "searchTextBox" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Confirm Password</p>
+                    </td>
+                    <td>@Html.PasswordFor(model => model.ConfirmPassword, new { @class = "searchTextBox" })
+                    @Html.Hidden("hiddenforwkid", (int)@ViewBag.wkid)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                       <input id="signup" class="button" type="submit" value="Next" />
+                    </td>
+                </tr>
+            }
+        </table>
+        <br />
+    </div>
+</body>
+</html>

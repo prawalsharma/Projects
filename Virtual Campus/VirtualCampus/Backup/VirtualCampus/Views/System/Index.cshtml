@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "LogIn";
+}
+@model VirtualCampus.Models.UsersModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/index.css" rel="stylesheet" />
+    <title>Virtual Campus - Login</title>
+</head>
+<body>
+    <div id="main-header"></div>
+    <div id="heading"><h1>VIRTUAL CAMPUS</h1></div>
+    <div id="index-menu">
+        <ul>
+            <li><a class="a-box" href="#">Blogs</a></li>
+            <li><a class="a-box" href="#">About Us</a></li>
+            <li><a class="a-box" href="#">Help</a></li>
+            <li id="last-li"><a class="a-box" href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="center" class="shadow">
+        <div id="center-head"><p>Login</p></div>
+        <p>@ViewBag.message</p>
+            @using (Html.BeginForm("loginuser","system"))
+            {
+                <table>
+                    <tr>
+                    <td></td>
+                    <td><h6 style="color: Red; margin: 0px; margin-left: 15px;">@ViewBag.error</h6></td>
+                    </tr>
+                    <tr>
+                        <td>Username:</td>
+                        <td>@Html.TextBoxFor(m => m.User_Name, null, new { @class = "TextBox" })</td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>@Html.PasswordFor(m => m.User_Password, new { @class = "TextBox" })</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><u>Forgot Password</u></a></td>
+                        <td><input id="login" class="button" type="submit" value="Log In" /></td>
+                    </tr>
+                </table>
+            }
+    </div>
+</body>
+</html>
+

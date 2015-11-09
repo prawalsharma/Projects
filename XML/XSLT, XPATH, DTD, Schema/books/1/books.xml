@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE db SYSTEM "books.dtd">
+<db>
+    <book bid="b1" authors="a1 a2">
+        <isbn>0201844524</isbn>
+        <title>Life of a Stranger</title>
+        <price>125</price>
+        <year>1992</year>
+    </book>
+    <book bid="b2" authors="a1">
+        <isbn>0896277524</isbn>
+        <title>Beginning of the End</title>
+        <price>200</price>
+        <year>2002</year>
+    </book>
+    <book bid="b3" authors="a3">
+        <isbn>1120444524</isbn>
+        <title>Home is where people belong</title>
+        <price>75</price>
+        <year>1965</year>
+    </book>
+    <book bid="b4" authors="a2 a3">
+        <isbn>0588542524</isbn>
+        <title>Entropy of unstable mind</title>
+        <price>50</price>
+        <year>1999</year>
+    </book>
+    <book bid="b5" authors="a2">
+        <isbn>4521789334</isbn>
+        <title>Searching for the Name</title>
+        <price>60</price>
+        <year>2003</year>
+    </book>
+    <author aid="a1" books="b1 b2">
+        <name>John Smith</name>
+        <url>www.johnsmithauthor.com</url>
+        <address>5029 Jerri Lane, Haltom City, Texas, 76117</address>
+    </author>
+    <author aid="a2" books="b4 b5 b1">
+        <name>Dan Scott</name>
+        <url>www.dantowrite.com</url>
+        <address>3316 Browning Court East, Fort Worth, Texas, 76111</address>
+    </author>
+    <author aid="a3" books="b3 b4">
+        <name>Mary Davidson</name>
+        <url>www.davidsonworld.com</url>
+        <address>8508 Mary's Creek Dr, Fort Worth, Texas, 76116</address>
+    </author>	
+    <publisher pid="p1" books="b1 b3 b4">
+        <name>The US Journals</name>
+        <address>409 Austin St, Houston, TX USA</address>
+        <phone>+1 685 877 2547</phone>
+        <url>http://www.usjournals.com</url>
+    </publisher>
+    <publisher pid="p2" books="b2 b5">
+        <name>Mid-West Publications</name>
+        <address>902 Lincol Plaza, Melourne, FL USA</address>
+        <phone>+1 478 248 2451</phone>
+        <url>http://www.mid-west-publications.com</url>
+    </publisher>
+</db>
+

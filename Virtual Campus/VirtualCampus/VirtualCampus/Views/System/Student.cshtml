@@ -1,0 +1,159 @@
+﻿@{
+    Layout = null;
+}
+@model VirtualCampus.Models.StudentModel 
+
+<!DOCTYPE html />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/index.css" rel="stylesheet" type="text/css" />
+    <title>Student Registration</title>
+</head>
+<body>
+<div id="main-header">
+    </div>
+    <div id="register-panel" class="shadow">
+        <div id="register-head-panel">
+            <p>Student Registration</p>
+        </div>
+         <p>
+            The username is unique for every user in the system.
+        </p>
+
+        @using (Html.BeginForm("SaveStudent", "system"))
+        {
+            <table>
+            <tr>
+                <td>
+                    <p> @{int id = ViewBag.userid;}
+                    <input type = hidden name = "User_Id" value="@id" />
+                        
+                        Name:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_Name, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+              <tr>
+                <td>
+                    <p>
+                        Enrollment Number:</p>
+                </td>
+                <td>
+                    @Html.TextBoxFor(model=> model.Student_EnrollmentNo, new{@class="searchTextBox"})
+                </td>
+            </tr>
+            <tr>
+            <td>
+            <p>Library ID:</p>
+            </td>
+            <td>
+            @Html.TextBoxFor(model => model.Student_LibraryId, new { @class = "searchTextBox" })
+            </td>
+            </tr>
+             <tr>
+            <td>
+            <p>Enrollment Year:</p>
+            </td>
+            <td>
+            @Html.TextBoxFor(model => model.Student_EnrollYear, new { @class = "searchTextBox" })
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Gender:</p>
+                </td>
+                <td>
+                    <p>@Html.RadioButtonFor(model => model.Student_Gender, "Male")Male
+                        @Html.RadioButtonFor(model => model.Student_Gender, "Female")Female</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        College:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_College, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                    <p>
+                        Department:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_Department, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+            
+            <tr>
+            <tr>
+                <td>
+                    <p>
+                        Contact No:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_ContactNo, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Email Id:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_EmailId, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Birthday:
+                    </p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_Birthdate, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+             <tr>
+            <td>
+            <p>HomeTown::</p>
+            </td>
+            <td>
+            @Html.TextBoxFor(model => model.Student_Hometown, new { @class = "searchTextBox" })
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Security Question:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_Security_Ques, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Security Answer:</p>
+                </td>
+                <td>@Html.TextBoxFor(model => model.Student_Security_Ans, new { @class = "searchTextBox" })
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                     <input id="signup" class="button" type="submit" value="Sign Up" />
+                </td>
+            </tr>
+        </table>
+            
+        }
+
+
+        </div>
+
+
+</body>
+
+
+</html>

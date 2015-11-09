@@ -1,0 +1,181 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div class="block-container shadow style-3">
+    @if(@ViewBag.id == "1"){
+        <div class="block">
+            <a href="#" class="block">
+                <h4>Manage Content</h4>
+                <div class="image-holder"></div>
+                <div class="caption">
+                    <h4>Here is the heading.</h4>
+                    <p>
+                        This is the content for the image.
+                    </p>
+                </div>
+            </a>
+        </div>
+    }
+    else { 
+        <div class="block">
+            <a href="/news" class="block">
+                <h4>News</h4>
+                <div class="image-holder"><img src="ngj" alt=" " class="block-image" /></div>
+                <div class="caption">
+                    <h4>Here is the heading.</h4>
+                    <p>
+                        This is the content for the image.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="block">
+            <a href="#" class="block">
+                <h4>Pinboard</h4>
+                    <div class="image-holder">
+                        <img src="~/Images/sachinnews.jpg" class="block-image" />
+                    </div>
+                    <div class="caption">
+                        <h4>Here is the heading.</h4>
+                        <p>
+                            This is the content for the image.
+                        </p>
+                    </div>
+            </a>
+        </div>
+    }
+    <div class="block">
+        <a href="#" class="block">
+            <h4>Discussions</h4>
+            <div class="image-holder">
+                <img src="~/Images/prawal.jpg" class="block-image" />
+            </div>
+            <div class="caption">
+                <h4>Here is the heading.</h4>
+                <p>
+                    This is the content for the image.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="block">
+        <a href="#" class="block">
+            <h4>Discussions</h4>
+            <div class="image-holder">
+                <img src="~/Images/prawal.jpg" class="block-image" />
+            </div>
+            <div class="caption">
+                <h4>Here is the heading.</h4>
+                <p>
+                    This is the content for the image.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="block">
+        <a href="#" class="block">
+            <h4>Opportunities</h4>
+            <div class="image-holder">
+                <img src="~/Images/sachinnews.jpg" class="block-image" />
+            </div>
+            <div class="caption">
+                <h4>Here is the heading.</h4>
+                <p>
+                    This is the content for the image.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="block">
+        <a href="#" class="block">
+            <h4>Blogs</h4>
+            <div class="image-holder">
+                <img src="~/Images/interest.jpg" class="block-image" />
+            </div>
+            <div class="caption">
+                <h4>Here is the heading.</h4>
+                <p>
+                    This is the content for the image.
+                </p>
+            </div>
+        </a>
+    </div>
+    <div class="block">
+        <a href="/manage" class="block">
+            <h4>Admin Manage</h4>
+            <div class="image-holder">
+                <img src="~/Images/interest.jpg" class="block-image" />
+            </div>
+            <div class="caption">
+                <h4>Here is the heading.</h4>
+                <p>
+                    This is the content for the image.
+                </p>
+            </div>
+        </a>
+    </div>
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+    else { 
+        <div id="side-bar-one">
+            <div class="header shadow">
+               <h5>Applications</h5>
+            </div>
+            <div id="side-content-one" class="shadow">
+                <p>@ViewBag.Message1</p>
+            </div>
+        </div>
+        <div id="side-bar-two">
+            <div class="header shadow">
+                <h5>Personal Profiling</h5>
+            </div>
+            <div id="side-content-two" class="shadow">
+
+                <ul id="app-ul">
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="~/Images/personal/leadershipreport.png" />
+                            <center><h5>Leadership</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="~/Images/personal/eqreport.png" />
+                            <center><h5>EQ Report</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="~/Images/personal/education.png" />
+                            <center><h5>Education</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="~/Images/personal/socialreport.png" />
+                            <center><h5>Social</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="~/Images/personal/personalityreport.png" />
+                            <center><h5>Overall</h5></center>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+}
+
+    
+
+
+

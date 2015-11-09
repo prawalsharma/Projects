@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "AddNews";
+}
+
+@model VirtualCampus.Models.AOSCategoryModel
+            
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    <p>
+        <a href="#">News</a> --> <a href="#">Edit News</a>
+    </p>
+    &nbsp;&nbsp;&nbsp;
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td><p>AOS CategoryID</p></td>
+            <td><p> @ViewBag.AOSCatId </p> </td>
+            
+        </tr>
+        <tr>
+            <td><p>AOS Category</p></td>
+            <td> 
+               
+                
+                @Html.TextBoxFor(model => model.category_Name, new { Value = @ViewBag.editableAOSCatName })
+          
+                @Html.ValidationMessageFor(model => model.category_Name)
+            </td>
+            
+        </tr>
+        @*<tr>
+            <td><p>Category Description</p></td
+            <td><textarea rows="4" class="TextBox"></textarea></td>
+        </tr> *@
+        <tr>
+            <td></td>
+            <td> <input type="submit" value="Edit AOSCategory" /></td>
+        </tr>
+    </table>
+    }
+    <ul>
+        <li style="display: inline-block;">@Html.ActionLink("Add More InterestCategory", "AddInterest", "Manage", new { @class = "button" })</li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News SubCategory"/></li>
+    </ul>
+    
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

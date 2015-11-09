@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="book">
+		<xsd:sequence>
+			<xsd:element name="isbn" type="xsd:long"/>
+			<xsd:element name="title" type="xsd:string"/>
+			<xsd:element name="price" type="xsd:int"/>
+			<xsd:element name="year" type="xsd:int"/>
+		</xsd:sequence>
+		<xsd:attribute name="bid">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="([a-zA-Z0-9])*" /> 
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="authors" type="xsd:string" />
+	</xsd:complexType>
+	<xsd:complexType name="author">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="url" type="xsd:anyURI"/>
+			<xsd:element name="address" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="aid">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="([a-zA-Z0-9])*" /> 
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="books" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="publisher">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="address" type="xsd:string"/>
+			<xsd:element name="phone" type="xsd:string"/>
+			<xsd:element name="url" type="xsd:anyURI"/>
+		</xsd:sequence>
+		<xsd:attribute name="pid">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="([a-zA-Z0-9])*" /> 
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="books" type="xsd:string" />
+	</xsd:complexType>
+	<xsd:element name="db">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:choice minOccurs="1" maxOccurs="unbounded">
+					<xsd:element name="book" type="book"/>
+					<xsd:element name="author" type="author" />
+					<xsd:element name="publisher" type="publisher" />
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

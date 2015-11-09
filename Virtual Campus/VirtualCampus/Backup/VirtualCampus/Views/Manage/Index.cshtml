@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Manage Content";
+}
+
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    &nbsp;&nbsp;
+            
+        <p> Please Select the menu options to manage the content of the system.</p>
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

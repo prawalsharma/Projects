@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "RssTry";
+}
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div class="block-container shadow style-3">
+   
+    @{
+            string[,,] dataarr = new string[@ViewBag.nolinks,10,10];
+            Int32 pi = 0;
+            foreach (var sublist in @ViewBag.display){
+                Int32 pj = 0;
+                foreach(var value in sublist){      
+                        Int32 pk= 0;
+                    foreach(var subvalue in value){
+                        dataarr[pi, pj, pk] = subvalue;  
+                        pk++;
+                    }
+                    pj++;
+                }
+                pi++;
+            }
+        }
+   
+        @for (int dis = 0; dis < @ViewBag.nolinks; dis++)
+        {
+        <div id="@dis" class="block">
+                @{
+            Random r = new Random();
+            int ran = r.Next(0, 10);
+                    }
+                <div class="image-holder" style="font-size: 0px;">@Html.Raw(dataarr[dis, ran, 1])</div>
+                <div class="caption"><h6>@Html.Raw(dataarr[dis, ran, 0])</h6></div>
+                <script>
+                    $('.image-holder p').css({ 'font-size': '0px', 'padding': '0px' });
+                    $('.image-holder img').css({ 'width': '100%', 'height': 'auto', 'margin': '0px' });
+                </script>
+        </div>
+        }
+
+    <script type="text/javascript" src="http://ajax.google.apis.com/ajax/libs/jquery/1.3.0/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        var auto_refresh = setInterval(function () {
+            var boxes = @ViewData["nolinks"];
+            for (var dis = 0; dis < boxes; dis++) {
+                $('#' + dis).load(document.URL + ' #' + dis, function () {
+                    $('.image-holder p').css({ 'font-size': '0px', 'padding': '0px' });
+                    $('.image-holder img').css({ 'width': '100%', 'height': 'auto', 'margin': '0px' });
+                });
+            }
+        }, 10000);
+    </script>
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+    else
+    { 
+        <div id="side-bar-one">
+            <div class="header shadow">
+                <h5>
+                    Applications</h5>
+            </div>
+            <div id="side-content-one" class="shadow">
+                <p>@ViewBag.Message1</p>
+            </div>
+        </div>
+        <div id="side-bar-two">
+            <div class="header shadow">
+                <h5>
+                    Personal Profiling</h5>
+            </div>
+            <div id="side-content-two" class="shadow">
+                <ul id="app-ul">
+                    <li id="app-li"><a href="#" class="small-block">
+                        <img src="~/Images/personal/leadershipreport.png" />
+                        <center><h5>Leadership</h5></center>
+                    </a></li>
+                    <li id="app-li"><a href="#" class="small-block">
+                        <img src="~/Images/personal/eqreport.png" />
+                        <center><h5>EQ Report</h5></center>
+                    </a></li>
+                    <li id="app-li"><a href="#" class="small-block">
+                        <img src="~/Images/personal/education.png" />
+                        <center><h5>Education</h5></center>
+                    </a></li>
+                    <li id="app-li"><a href="#" class="small-block">
+                        <img src="~/Images/personal/socialreport.png" />
+                        <center><h5>Social</h5></center>
+                    </a></li>
+                    <li id="app-li"><a href="#" class="small-block">
+                        <img src="~/Images/personal/personalityreport.png" />
+                        <center><h5>Overall</h5></center>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    }
+}

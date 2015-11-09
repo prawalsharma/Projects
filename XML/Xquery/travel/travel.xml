@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE travel SYSTEM "travel.dtd">
+<travel>
+  <airport code="A01">
+    <name>DFW</name>
+  </airport>
+  <airport code="A02">
+    <name>SFO</name>
+  </airport>
+  <airport code="A03">
+    <name>JFK</name>
+  </airport>
+  <airport code="A04">
+    <name>CHI</name>
+  </airport>
+  <airport code="A05">
+    <name>LAX</name>
+  </airport>
+  <airport code="A06">
+     <name>HOU</name>
+  </airport>
+
+  <flight id="F01" from="A01" to="A03">
+    <date>11/23/2014</date>
+    <departureTime>7.00 a.m.</departureTime>
+    <arrivalTime>9.30 a.m.</arrivalTime>
+  </flight>
+  <flight id="F02" from="A01" to="A03">
+    <date>11/20/2014</date>
+    <departureTime>4.00 a.m.</departureTime>
+    <arrivalTime>6.30 a.m.</arrivalTime>
+  </flight>
+  <flight id="F03" from="A01" to="A03">
+    <date>11/24/2014</date>
+    <departureTime>7.00 a.m.</departureTime>
+    <arrivalTime>9.30 a.m.</arrivalTime>
+  </flight>
+  <flight id="F04" from="A01" to="A03">
+    <date>11/20/2014</date>
+    <departureTime>7.00 a.m.</departureTime>
+    <arrivalTime>9.30 a.m.</arrivalTime>
+  </flight>
+  <flight id="F01A" from="A03" to="A06">
+    <date>11/20/2014</date>
+    <departureTime>6.00 p.m.</departureTime>
+    <arrivalTime>8.30 p.m.</arrivalTime>
+  </flight>
+  <flight id="F01B" from="A03" to="A06">
+    <date>11/21/2014</date>
+    <departureTime>6.00 p.m.</departureTime>
+    <arrivalTime>8.30 p.m.</arrivalTime>
+  </flight>
+  <flight id="F01C" from="A03" to="A06">
+    <date>11/22/2014</date>
+    <departureTime>6.00 p.m.</departureTime>
+    <arrivalTime>8.30 p.m.</arrivalTime>
+  </flight>
+  <flight id="F03A" from="A01" to="A04">
+    <date>11/19/2014</date>
+    <departureTime>4.00 a.m.</departureTime>
+    <arrivalTime>5.50 a.m.</arrivalTime>
+  </flight>
+  <flight id="F03B" from="A01" to="A04">
+    <date>11/15/2014</date>
+    <departureTime>4.00 a.m.</departureTime>
+    <arrivalTime>5.50 a.m.</arrivalTime>
+  </flight>
+  <flight id="F03C" from="A01" to="A04">
+    <date>11/12/2014</date>
+    <departureTime>4.00 a.m.</departureTime>
+    <arrivalTime>5.50 a.m.</arrivalTime>
+  </flight>
+  <flight id="F04" from="A03" to="A02">
+    <date>11/28/2014</date>
+    <departureTime>3.00 p.m.</departureTime>
+    <arrivalTime>7.00 p.m.</arrivalTime>
+  </flight>
+  <flight id="F05" from="A04" to="A05">
+    <date>11/25/2014</date>
+    <departureTime>4.00 p.m.</departureTime>
+    <arrivalTime>7.00 p.m.</arrivalTime>
+  </flight>
+  <flight id="F06" from="A05" to="A04">
+    <date>11/20/2014</date>
+    <departureTime>7.00 p.m.</departureTime>
+    <arrivalTime>10.00 p.m.</arrivalTime>
+  </flight>
+  <flight id="F07A" from="A05" to="A01">
+    <date>11/19/2014</date>
+    <departureTime>4.00 p.m.</departureTime>
+    <arrivalTime>6.00 p.m.</arrivalTime>
+  </flight>
+  <flight id="F07B" from="A05" to="A01">
+    <date>11/18/2014</date>
+    <departureTime>4.00 p.m.</departureTime>
+    <arrivalTime>6.00 p.m.</arrivalTime>
+  </flight>
+  <flight id="F07C" from="A05" to="A01">
+    <date>11/25/2014</date>
+    <departureTime>4.00 p.m.</departureTime>
+    <arrivalTime>6.00 p.m.</arrivalTime>
+  </flight>
+  <flight id="F08" from="A02" to="A03">
+    <date>11/21/2014</date>
+    <departureTime>8.00 a.m.</departureTime>
+    <arrivalTime>10.00 a.m.</arrivalTime>
+  </flight>
+
+  <passenger ssn="S457240157">
+    <name>John Smith</name>
+    <address>904, Austin Street, Arlington, TX</address>
+  </passenger>
+  <passenger ssn="S428963751">
+    <name>David Martin</name>
+    <address>506, Abraham Street, New York City, NY</address>
+  </passenger>
+  <passenger ssn="S789542687">
+    <name>Alton John</name>
+    <address>89, Davis Hall, A04cago, IL</address>
+  </passenger>
+  <passenger ssn="S98563478">
+    <name>Justin Snow</name>
+    <address>3909 Witmer Rd, Niagara Falls, NY</address>
+  </passenger>
+  <passenger ssn="S985478569">
+    <name>Abraham Mani</name>
+    <address>548 Market St, San Francisco, CA</address>
+  </passenger>
+  <passenger ssn="S958745631">
+    <name>Mary Dunlop</name>
+    <address>8032 W 3rd St, Los Angeles, CA</address>
+  </passenger>
+  <passenger ssn="S987459652">
+    <name>Easter Levine</name>
+    <address>80, Humminbird Street Los Angeles, CA</address>
+  </passenger>
+  <passenger ssn="S958745896">
+    <name>Munez Rawal</name>
+    <address>4309 S Morgan St, A04cago, IL</address>
+  </passenger>
+  <passenger ssn="S326598748">
+    <name>Chris Martin</name>
+    <address>221 W.Colorado Blvd, Dallas, TX</address>
+  </passenger>
+  <passenger ssn="S958745893">
+    <name>Duke Lennon</name>
+    <address>809, Harley Street, Dallas, TX</address>
+  </passenger>
+  <passenger ssn="S324578421">
+    <name>A04koo Gilmour</name>
+    <address>98-4, Ellora Streer, Los Angeles, CA</address>
+  </passenger>
+  <passenger ssn="S784515025">
+    <name>Harley Dustin</name>
+    <address>70, Palace Dustin, New York, NY</address>
+  </passenger>
+
+  
+  <reservation passenger="S457240157" flight="F01">
+    <creditcard>2357548954248798</creditcard>
+  </reservation>
+  <reservation passenger="S457240157" flight="F01B">
+    <creditcard>78451932548700125</creditcard>
+  </reservation>
+  <reservation passenger="S457240157" flight="F03">
+    <creditcard>7895236540125458</creditcard>
+  </reservation>
+  <reservation passenger="S428963751" flight="F04">
+    <creditcard>7985426532101458</creditcard>
+  </reservation>
+  <reservation passenger="S428963751" flight="F08">
+    <creditcard>7895623410254782</creditcard>
+  </reservation>
+  <reservation passenger="S789542687" flight="F05">
+    <creditcard>7895632401258963</creditcard>
+  </reservation>
+  <reservation passenger="S98563478" flight="F07A">
+    <creditcard>7841259320125963</creditcard>
+  </reservation>
+  <reservation passenger="S98563478" flight="F01">
+    <creditcard>1000232569854120</creditcard>
+  </reservation>
+  <reservation passenger="S958745631" flight="F07C">
+    <creditcard>2158796542563258</creditcard>
+  </reservation>
+  <reservation passenger="S987459652" flight="F05">
+    <creditcard>4578496542563258</creditcard>
+  </reservation>
+  <reservation passenger="S958745896" flight="F05">
+    <creditcard>6258796542563258</creditcard>
+  </reservation>
+  <reservation passenger="S958745896" flight="F07C">
+    <creditcard>2158124589563258</creditcard>
+  </reservation>
+  <reservation passenger="S326598748" flight="F02">
+    <creditcard>1248795632563258</creditcard>
+  </reservation>
+  <reservation passenger="S958745893" flight="F03B">
+    <creditcard>2578459632124578</creditcard>
+  </reservation>
+  <reservation passenger="S324578421" flight="F03A">
+    <creditcard>2578245792124578</creditcard>
+  </reservation>
+  <reservation passenger="S324578421" flight="F05">
+    <creditcard>4587425632541258</creditcard>
+  </reservation>
+  <reservation passenger="S784515025" flight="F01B">
+    <creditcard>7845129865320215</creditcard>
+  </reservation>
+  <reservation passenger="S985478569" flight="F03B">
+    <creditcard>1452780022365895</creditcard>  
+  </reservation>
+</travel>

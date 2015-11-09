@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Manage Content";
+}
+
+@model VirtualCampus.Models.NewsCategoryModel
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    &nbsp;
+        <table id="content-table" style="width:100%;">
+            
+            <tr id="content-tr">
+                <td style="width: 40px;"><p>Sno</p></td>
+                <td><p>News Category</p></td>
+                <td style="width: 45px;"><p>Edit</p></td>
+                <td style="width: 45px;"><p>Delete</p></td>
+            </tr>
+            
+            @foreach (var cat in @ViewBag.Categories)
+            {   
+            <tr id="content-tr">
+                <td><p>@cat.NewsCategory_Id</p></td>
+                <td><p>
+                <a href="ViewNews?k=@cat.NewsCategory_Id">@cat.CategoryName</a>
+                </p>
+                </td>
+                <td><p>@Html.ActionLink("Edit", "EditNewsCategory", new { k = @cat.NewsCategory_Id }, null)</p></td>
+               @* <td><p>@Html.ActionLink("Delete", "", null,new {@class = "demo" , *@ @*@class = "delete",*@ @*k = @cat.NewsCategory_Id})</p></td> *@
+                <td><p>@Html.ActionLink("Delete", "DeleteNewsCategory", new { k = @cat.NewsCategory_Id }, new { onclick = "return confirm('Are you sure?');" })</p></td>
+            </tr>
+            }
+            
+        </table>
+    &nbsp;&nbsp;
+    <ul>
+        <li style="display: inline-block;">
+        @Html.ActionLink("AddNews", "AddNews", "Manage",null ,new { @class = "button" })
+        </li>
+        <li style="display: inline-block;"> @Html.ActionLink("AddNewsSubCat", "AddNewsSubCat", "Manage",null ,new { @class = "button" })</li>
+    </ul>  
+</div>
+
+<script>
+    $('.demo').confirmOn('click', function (e, confirmed) {
+        var id = $(".demo").attr('k');
+        if (confirmed) { // Clicked yes
+
+            window.location.href = '/Manage/DeleteNewsCategory?k='+id;
+        } else { // Clicked no
+            $('#msg_button_1').fadeIn();
+        }
+    });
+</script>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

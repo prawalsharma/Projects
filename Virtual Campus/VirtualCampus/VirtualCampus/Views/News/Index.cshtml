@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "NewsSubscribed";
+}
+<div id="content-header">
+    @Html.Partial("/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @if (@ViewBag.id == "1")
+    {
+        <div class="block">
+            <a href="#" class="block">
+                <h4>Manage Content</h4>
+                <div class="image-holder"></div>
+                <div class="caption">
+                    <h4>Here is the heading.</h4>
+                    <p>
+                        This is the content for the image.
+                    </p>
+                </div>
+            </a>
+        </div>
+    }
+    else
+    { 
+        
+        foreach(string s_cat in ViewData["ashmi"] as string[]){
+        <div class="block">
+            <a href="../News/RssTry?k=@s_cat" class="block">
+                <div class="image-holder">Check </div>
+                <div class="caption">
+                    <h4>@s_cat</h4>
+                </div>
+            </a>
+        </div>
+        }
+    }
+  </div>      
+
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("/Views/Shared/_AdminManage.cshtml");
+    }
+    else { 
+        <div id="side-bar-one">
+            <div class="header shadow">
+               <h5>Applications</h5>
+            </div>
+            <div id="side-content-one" class="shadow">
+                <p>@ViewBag.Message1</p>
+            </div>
+        </div>
+        <div id="side-bar-two">
+            <div class="header shadow">
+                <h5>Personal Profiling</h5>
+            </div>
+            <div id="side-content-two" class="shadow">
+
+                <ul id="app-ul">
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="/Images/personal/leadershipreport.png" />
+                            <center><h5>Leadership</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="/Images/personal/eqreport.png" />
+                            <center><h5>EQ Report</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="/Images/personal/education.png" />
+                            <center><h5>Education</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="/Images/personal/socialreport.png" />
+                            <center><h5>Social</h5></center>
+                        </a>
+                    </li>
+                    <li id="app-li">
+                        <a href="#" class="small-block">
+                            <img src="/Images/personal/personalityreport.png" />
+                            <center><h5>Overall</h5></center>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+}
+
+    
+
+
+

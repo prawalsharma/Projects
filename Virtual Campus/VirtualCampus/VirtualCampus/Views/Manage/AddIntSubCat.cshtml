@@ -1,0 +1,56 @@
+﻿@model VirtualCampus.Models.InterestSubCatModel
+ 
+@{
+    ViewBag.Title = "AddInterestSubCat";
+}
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    <p>
+        <a href="#">News</a> --> <a href="#">Add News Subcategory</a>
+    </p>
+    &nbsp;&nbsp;&nbsp;
+    @using (Html.BeginForm())
+    {
+    <table>
+        <tr>
+            <td><p>Interest Category</p></td>
+            <td>
+                @* @Html.LabelFor(model => model.NewsCategory_id)
+                @Html.DropDownListFor(model => model.NewsCategory_id, Model.NewsCategory)
+                @Html.ValidationMessageFor(m=>m.NewsCategory_id) *@
+                @*@Html.DropDownList("categories");*@
+                
+               @Html.DropDownList( "InterestCategory_Id", (IEnumerable<SelectListItem>)ViewData["intCat"],
+             new { id = "InterestCategory_Id" });
+            </td>
+        </tr>
+        <tr>
+            <td><p>InterestLink</p></td>
+            <td>@Html.TextBoxFor(model => model.Interest, new { @class = "TextBox" })
+      
+            </td>
+        </tr>
+        <tr>
+            <td><p>Category Description</p></td>
+            <td>@Html.TextAreaFor(model=> model.Interest_Description_Name)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add NewsLinks" /></td>
+        </tr>
+    </table>
+    }
+    <ul>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News Category" /></li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add More NewsLinks" /></li>
+    </ul>
+</div>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}

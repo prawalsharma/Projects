@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "ViewInterest";
+}
+
+<div id="content-header">
+    @Html.Partial("~/Views/Shared/_UserName.cshtml");
+</div>
+<div id="style-3" class="block-container shadow">
+    @Html.Partial("~/Views/Shared/_ManageMenu.cshtml");
+    <p>
+        <a href="#">News</a> --> <a href="#">Add News</a>
+    </p>
+     <h4> <p> AreaOfStudy Category: @ViewBag.AOSCatName </p> </h4>
+     
+   <table id="content-table" style="width:100%;">
+            
+            <tr id="content-tr">
+                <td style="width: 40px;"><p>Sno</p></td>
+                <td><p>AOS Sub Category</p></td>
+                <td style="width: 45px;"><p>Edit</p></td>
+                <td style="width: 45px;"><p>Delete</p></td>
+            </tr>
+            
+            @foreach (var subcat in @ViewBag.AOSList)
+            {   
+            <tr id="content-tr">
+                <td><p>@subcat.Areaofstudy_Id</p></td>
+                <td><p>@subcat.Areaofstudy</p></td>
+                <td><p>@Html.ActionLink("Edit", "EditAOS", new { k = @subcat.Areaofstudy_Id, j= @subcat.Areaofstudy_Category_Id }, null)</p></td>
+                <td><p>@Html.ActionLink("Delete","DeleteAOS",null, new{@id= "demo", k=@subcat.Areaofstudy_Id},new { onclick = "return confirm('Are you sure?');"})</p></td>
+                
+            </tr>
+            }
+            
+        </table>    
+        
+
+    <ul>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News Category" /></li>
+        <li style="display: inline-block;"><input class="button" type="button" value="Add News SubCategory"/></li>
+    </ul>
+</div>
+
+<script>
+    $('#demo').confirmOn('click', function (e, confirmed) {
+        var id = $("#demo").attr('k');
+        if (confirmed) { // Clicked yes
+
+            window.location.href = '/Manage/DeleteNewsSubCat?k=' + id;
+        } else { // Clicked no
+            $('#msg_button_1').fadeIn();
+        }
+    });
+</script>
+@section sideSection {
+    @if (@ViewBag.id == "1")
+    {
+        @Html.Partial("~/Views/Shared/_AdminManage.cshtml");
+    }
+}
